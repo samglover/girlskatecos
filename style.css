@@ -1,0 +1,553 @@
+/*------------------------------
+Theme Name:   girlskatecos
+Author:       Sam Glover
+Description:  A theme for girlskatecos.com
+Version:      0.1.0
+Text Domain:  girlskatecos
+
+License:      Copyright Sam Glover
+License URI:  N/A
+
+Core colors:
+https://www.colorhexa.com/cc0000 Links
+https://www.colorhexa.com/d8f4f6 Highlights
+https://www.colorhexa.com/f4f696 Alerts/warnings
+
+https://www.colorhexa.com/d08783 Not yet in use
+------------------------------*/
+
+html {
+  font-family: sans-serif;
+  font-size: 62.5%; /* 10px */
+  line-height: 1;
+}
+
+
+/**
+* Page Layout
+*/
+
+body {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin: 0 auto;
+  max-width: 90rem;
+  padding: 1rem;
+}
+
+#header {
+  margin-bottom: 4rem;
+}
+
+#content,
+#footer {
+  margin-bottom: 6rem;
+}
+
+#footer {
+  clear: both;
+}
+
+
+/**
+* Core Typography
+*/
+
+body {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6,
+#title,
+.headline {
+  letter-spacing: -.1rem;
+  line-height: 1.15;
+  margin: 2.75rem 0;
+}
+
+h1,
+#title,
+.headline {
+  font-weight: 800;
+}
+
+h2, h3, h4, h5, h6,
+.post-card .headline {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 6.104rem;
+}
+
+h2,
+.headline {
+  font-size: 4.883rem;
+}
+
+h3,
+#title,
+.post-card .headline {
+  font-size: 3.906rem;
+}
+
+h4 {
+  font-size: 3.125rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+p {
+  margin: 0 0 1.84rem 0;
+}
+
+small,
+.small {
+  font-size: 80%;
+}
+
+blockquote,
+.wp-block-quote {
+  border-left: .5rem solid #aaa;
+  margin: 0 0 1.84rem; 0;
+  padding: 0 0 0 2rem;
+}
+
+ol,
+ul {
+  padding: 0 0 0 3rem;
+  margin: 0 0 1.84rem; 0;
+}
+
+  li {
+    margin: 0 0 .92rem; 0;
+  }
+
+a,
+a:visited {
+  color: #c00;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #a00;
+  text-decoration: underline;
+}
+
+/* Hidden Text */
+.screen-reader-text {
+  position: absolute;
+    left: -5000px;
+}
+
+
+/**
+* Grids
+*/
+
+.grid-cols-2,
+.grid-cols-3,
+.grid-cols-4 {
+  display: grid;
+  margin-bottom: 6rem;
+}
+
+.grid-cols-2 {
+  grid-gap: 2rem;
+  grid-template-columns: repeat( 2, 1fr );
+}
+
+.grid-cols-3 {
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat( 3, 1fr );
+}
+
+.grid-cols-4 {
+  grid-gap: 1rem;
+  grid-template-columns: repeat( 4, 1fr );
+}
+
+.grid-cols-2 .card,
+.grid-cols-3 .card,
+.grid-cols-4 .card {
+  margin: 0;
+}
+
+.grid-cols-2 .card.has-post-thumbnail,
+.grid-cols-3 .card.has-post-thumbnail,
+.grid-cols-4 .card.has-post-thumbnail {
+  display: block;
+}
+
+  @media ( max-width: 800px ) {
+
+    .grid-cols-2 {
+      display: block;
+    }
+
+      .grid-cols-2 .card {
+        margin-bottom: 2rem;
+      }
+
+    .grid-cols-3,
+    .grid-cols-4 {
+      grid-template-columns: repeat( 2, 1fr );
+    }
+
+  }
+
+  @media ( max-width: 600px ) {
+
+    .grid-cols-3 {
+      display: block;
+    }
+
+      .grid-cols-3 .card {
+        margin-bottom: 2rem;
+      }
+
+  }
+
+
+/**
+* Header
+*/
+
+#title {
+  letter-spacing: -.2rem;
+  text-transform: uppercase;
+}
+
+#title a,
+#title a:visited {
+  color: #aaa;
+}
+
+#title a:hover,
+#title a:focus {
+  color: #a00;
+  text-decoration: none;
+}
+
+#breadcrumbs {
+  color: #666;
+  text-transform: uppercase;
+}
+
+  #breadcrumbs .last-breadcrumb {
+    font-weight: 600;
+  }
+
+
+/**
+* Images
+*/
+
+img {
+  height: auto;
+  margin: 0 0 1.84rem 0;
+  max-width: 100%;
+}
+
+
+/**
+* Lists, Cards & Stickers
+*/
+
+.card {
+  border: .1rem solid #aaa;
+  box-shadow: .5rem .5rem #ddd;
+  display: block;
+  margin-bottom: 2rem;
+  padding: 3rem;
+}
+
+  .card *:first-child {
+    margin-top: 0;
+  }
+
+  .card *:last-child {
+    margin-bottom: 0;
+  }
+
+a.card {
+  color: unset;
+  text-decoration: none;
+}
+
+a.card:hover {
+  background-color: #d8f4f6;
+}
+
+.stickers {
+  grid-gap: 2rem;
+}
+
+  .sticker {
+    align-self: center;
+    border: .1rem solid #aaa;
+    box-shadow: .5rem .5rem #ddd;
+    line-height: 0;
+    padding: 1rem;
+  }
+
+  .sticker img {
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* Cards with Featured Images */
+
+.card.has-post-thumbnail {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 40% 1fr;
+}
+
+.card.has-post-thumbnail > * {
+  align-self: center;
+}
+
+.card .wp-post-image {
+  margin-bottom: 0;
+}
+
+  @media ( max-width: 800px ) {
+
+    .card.has-post-thumbnail {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .post-card.has-post-thumbnail .headline {
+      margin-bottom: 0;
+    }
+
+    .post-card.has-post-thumbnail .excerpt {
+      display: none;
+    }
+
+  }
+
+  @media ( max-width: 480px ) {
+
+    .card.has-post-thumbnail {
+      display: block;
+    }
+
+    .card.has-post-thumbnail .wp-post-image {
+      margin: 0 0 1.84rem 0;
+    }
+
+  }
+
+
+/* Card Headlines & Excerpts */
+
+a.card:hover .headline {
+  color: #a00;
+}
+
+.card p,
+.card ol,
+.card ul,
+.card blockquote {
+  font-size: 80%;
+}
+
+.pagination,
+.post-nav-links {
+  color: #666;
+  font-size: 80%;
+  margin: 4rem 0;
+  text-transform: uppercase;
+}
+
+  .pagination .current,
+  .post-nav-links .current {
+    font-weight: 600;
+  }
+
+
+/**
+* Posts & Pages
+*/
+
+.section-header,
+a.section-header,
+a.section-header:visited {
+  color: #666;
+  display: block;
+  font-weight: 700;
+  letter-spacing: -.1rem;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+a.section-header:hover,
+a.section-header:focus {
+  color: #a00;
+  text-decoration: none;
+}
+
+.date {
+  color: #666;
+  font-size: 1.4rem;
+}
+
+
+#product-rating-box h3 {
+	margin-bottom: 0;
+}
+
+	#product-rating-box h3 a {
+		text-decoration: none;
+	}
+
+	#product-rating-box .star-rating-wrapper {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat( 2, max-content );
+	}
+
+		.star-rating-wrapper .stars {
+			display: inline-block;
+			height: 40px;
+			overflow: hidden;
+			position: relative;
+		}
+
+			.star-rating-wrapper .stars .star {
+				margin: 0 -5px;
+			}
+
+			.star-rating-wrapper .stars > .star {
+				color: #ddd;
+			}
+
+			.star-rating-wrapper .star-rating {
+				height: 40px;
+				overflow: hidden;
+				position: absolute;
+					left: 0;
+					top: 0;
+				white-space: nowrap;
+			}
+
+			.star-rating-wrapper .star-rating .star {
+				color: #0073aa;
+			}
+
+	#product-rating-box .star-rating-label {
+		line-height: 40px;
+		margin: 0;
+	}
+
+	#product-rating-box .entry-meta span {
+		margin-right: unset;
+	}
+
+
+/**
+* Forms
+*/
+
+label {
+  display: block;
+  font-size: 80%;
+  margin: 0 0 .46rem 0;
+}
+
+input,
+select,
+textarea {
+  border: .1rem solid #aaa;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 0 2.76rem 0;
+  padding: .5rem 1rem;
+}
+
+input:not( .button ),
+select,
+textarea {
+  width: 100%;
+}
+
+
+/**
+* Buttons
+*/
+
+button,
+.button,
+.wp-block-button .wp-block-button__link {
+  background-color: #fff;
+  border: .1rem solid #aaa;
+  border-radius: 0;
+  color: #666;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 2.76rem 0;
+  padding: .75rem 1.25rem;
+  text-transform: uppercase;
+  transition: background-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+}
+
+button:hover,
+.button:hover,
+.wp-block-button .wp-block-button__link:hover {
+  background-color: #d8f4f6;
+  box-shadow: .5rem .5rem #ddd;
+  color: #c00;
+  text-decoration: none;
+}
+
+button:active,
+.button:active,
+.wp-block-button .wp-block-button__link:active {
+  box-shadow: unset;
+  color: #c00;
+  outline: none;
+}
+
+.forminator-row {
+  margin-bottom: 0 !important;
+}
+
+.forminator-row .forminator-has_error {
+  margin-bottom: 2.76rem;
+}
+
+.forminator-response-message {
+  background-color: #d8f4f6;
+}
+
+.forminator-error-message {
+  background-color: #f4f696;
+}
+
+
+/**
+* Footer
+*/
+
+#footer .copyright {
+  color: #aaa;
+}
