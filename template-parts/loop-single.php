@@ -6,8 +6,6 @@
 
     <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); } ?>
 
-    <?php if ( ! has_shortcode( $post->post_content, 'brand-details' ) ) { do_shortcode( '[brand-details]' ); } ?>
-
     <?php the_content(); ?>
 
     <?php wp_link_pages(); ?>

@@ -41,9 +41,14 @@ function register_stylesheets_scripts() {
 	wp_register_style( 'normalize-css', $template_dir_uri . '/css/normalize.css' );
 	wp_enqueue_style( 'normalize-css' );
 
-  $cache_buster = filemtime( get_stylesheet_directory() . '/style.css' );
-	wp_register_style( 'stylesheet', $template_dir_uri . '/style.css', array(), $cache_buster, 'all' );
+  $cacheBusterCSS = filemtime( get_stylesheet_directory() . '/style.css' );
+	wp_register_style( 'stylesheet', $template_dir_uri . '/style.css', array(), $cacheBusterCSS, 'all' );
 	wp_enqueue_style( 'stylesheet' );
+
+  // Load consolidated scripts in the footer.
+	$cacheBusterFS = filemtime( get_stylesheet_directory() . '/js/footer-scripts.js' );
+	wp_register_script( 'footer-scripts', $template_dir_uri . '/js/footer-scripts.js',  array( 'jquery' ), $cacheBusterFS, true );
+	wp_enqueue_script( 'footer-scripts' );
 
 }
 
@@ -69,25 +74,19 @@ add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
 
 
 /**
-* Register Footer Widget Area
+* Register Footer Menu
 */
-function register_widget_areas() {
+function register_menus() {
 
-  register_sidebar(
-      array(
-          'id'            => 'footer-widgets',
-          'name'          => __( 'Footer Widget Area' ),
-          'description'   => __( 'In the footer.' ),
-          'before_widget' => '<div id="%1$s" class="card widget %2$s">',
-          'after_widget'  => '</div>',
-          'before_title'  => '<h3 class="widget-title">',
-          'after_title'   => '</h3>',
-      )
-  );
+	register_nav_menus(
+		array(
+			'footer-menu' => 'Footer Menu'
+		)
+	);
 
 }
 
-add_action( 'widgets_init', 'register_widget_areas' );
+add_action( 'init', 'register_menus' );
 
 
 /**
@@ -185,7 +184,7 @@ function get_brand_pages( $page_id = null ) {
     'orderby'			    => 'title',
     'post_type'       => 'page',
     'posts_per_page'  => -1,
-    'post__not_in'    => array( 6, 8 ),
+    'post__not_in'    => array( 8 ),
   );
 
   $brand_pages_query = new WP_Query( $args );
@@ -227,13 +226,18 @@ function get_posts_by_category_slug( $category = null ) {
 
     <a <?php post_class( 'card page-card' ); ?> href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
 
-      <h2 class="headline"><?php the_title(); ?></h2>
-
       <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); } ?>
 
-      <?php $excerpt = get_the_excerpt(); ?>
+      <div class="headline-excerpt">
 
-      <p class="excerpt"><?php echo $excerpt; ?></p>
+        <h2 class="headline"><?php the_title(); ?></h2>
+
+        <?php if ( ! has_term( 'reviews', 'category' ) ) { ?>
+          <?php $excerpt = get_the_excerpt(); ?>
+          <p class="excerpt"><?php echo $excerpt; ?></p>
+        <?php } ?>
+
+      </div>
 
     </a>
 
@@ -368,8 +372,8 @@ add_shortcode( 'brand-details', 'gsc_brand_details' );
 */
 function gsc_brand_details_default_shortcode( $content ) {
 
-  if ( get_field( 'show_brand_details' ) && !has_shortcode( $content, 'brand-details' ) ) {
-    $content .= do_shortcode( '[brand-details]' );
+  if ( get_field( 'show_brand_details' ) && ! has_shortcode( $content, 'brand-details' ) ) {
+    $content = do_shortcode( '[brand-details]' ) . $content;
   }
 
   return $content;

@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="zOYbKlCTmi15V0VUqTzFI2tkjfyg1lJIVj9OdZd7qL4" />
 
-  <link rel="shortcut icon" type="image/svg+xml" href="<?php echo get_bloginfo( 'template_url' ); ?>/favicon.svg">
-
   <?php wp_head(); ?>
 
 </head>
@@ -28,6 +26,8 @@
 			<p id="title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></p>
 
 		<?php } ?>
+
+    <p class="section-header"><?php echo bloginfo( 'description' ); ?></p>
 
     <?php get_breadcrumbs(); ?>
 

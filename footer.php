@@ -1,8 +1,6 @@
   <div id="footer">
 
-    <div id="footer-widgets" class="grid-cols-3">
-      <?php dynamic_sidebar( 'footer-widgets' ); ?>
-    </div>
+    <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
 
     <p class="copyright"><small>The original content within this website is &copy; <?php echo date('Y') ?>.</small></p>
 
