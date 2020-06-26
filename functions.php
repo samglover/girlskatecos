@@ -15,6 +15,13 @@ add_action( 'init', 'unregister_tags' );
 */
 function theme_setup() {
 
+  add_theme_support( 'custom-logo', array(
+    'height'      => 85,
+    'width'       => 85,
+    'flex-height' => false,
+    'flex-width'  => false,
+    'header-text' => array( 'site-title', 'site-description' ),
+  ) );
   add_theme_support( 'editor-styles' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'responsive-embeds' );
@@ -299,60 +306,72 @@ function gsc_brand_details() {
 
       ?>
 
-      <div id="brand-details" class="card">
+      <div id="brand-details" class="card<?php if ( has_post_thumbnail() ) { echo ' has-brand-logo'; } ?>">
 
-        <h1 class="headline"><span itemprop="name"><?php echo $brand; ?></span></h1>
+        <div class="details">
 
-        <?php if ( get_field( 'owner' ) == true ) { ?>
+          <h1 class="headline"><span itemprop="name"><?php echo $brand; ?></span></h1>
 
-          <?php $owner = get_field( 'owner' ); ?>
+          <?php if ( get_field( 'owner' ) == true ) { ?>
 
-          <h4>Owner(s)</h4>
-          <p><?php echo $owner; ?></p>
+            <?php $owner = get_field( 'owner' ); ?>
 
-        <?php } ?>
-
-        <h4>Links</h4>
-
-        <ul>
-
-          <?php if ( get_field( 'shop_url' ) == true ) { ?>
-
-            <?php $shop_url= get_field( 'shop_url' ); ?>
-
-            <li><a href="<?php echo $shop_url; ?>">Shop</a></li>
+            <h4>Owner(s)</h4>
+            <p><?php echo $owner; ?></p>
 
           <?php } ?>
 
-          <?php if ( get_field( 'instagram' ) == true ) { ?>
-
-            <?php $ig= get_field( 'instagram' ); ?>
-
-            <li><a href="<?php echo $ig; ?>">Instagram</a></li>
-
-          <?php } ?>
-
-        </ul>
-
-        <h4>Products</h3>
-
-        <?php if ( get_field( 'products' ) == true ) { ?>
-
-          <?php $products = get_field( 'products' ); ?>
+          <h4>Links</h4>
 
           <ul>
 
-            <?php foreach ( $products as $product ) { ?>
+            <?php if ( get_field( 'shop_url' ) == true ) { ?>
 
-              <li><?php echo $product; ?></li>
+              <?php $shop_url= get_field( 'shop_url' ); ?>
+
+              <li><a href="<?php echo $shop_url; ?>">Shop</a></li>
+
+            <?php } ?>
+
+            <?php if ( get_field( 'instagram' ) == true ) { ?>
+
+              <?php $ig= get_field( 'instagram' ); ?>
+
+              <li><a href="<?php echo $ig; ?>">Instagram</a></li>
 
             <?php } ?>
 
           </ul>
 
-        <?php } ?>
+          <h4>Products</h3>
 
-        <?php echo $schema_json; ?>
+          <?php if ( get_field( 'products' ) == true ) { ?>
+
+            <?php $products = get_field( 'products' ); ?>
+
+            <ul>
+
+              <?php foreach ( $products as $product ) { ?>
+
+                <li><?php echo $product; ?></li>
+
+              <?php } ?>
+
+            </ul>
+
+          <?php } ?>
+
+          <?php echo $schema_json; ?>
+
+        </div>
+
+        <?php if ( has_post_thumbnail() ) { ?>
+
+          <div class="sticker">
+            <?php the_post_thumbnail( 'medium' ); ?>
+          </div>
+
+        <?php } ?>
 
       </div>
 

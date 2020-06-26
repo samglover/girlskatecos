@@ -4,7 +4,15 @@
 
     <div <?php post_class(); ?>>
 
-    <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); } ?>
+    <?php if ( ! get_field( 'show_brand_details' ) && has_post_thumbnail() ) { ?>
+
+      <div class="sticker">
+
+        <?php the_post_thumbnail( 'medium' ); ?>
+
+      </div>
+
+    <?php } ?>
 
     <?php the_content(); ?>
 
