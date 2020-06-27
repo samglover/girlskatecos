@@ -302,9 +302,10 @@ img {
     transition: background-color .2s, box-shadow .2s;
   }
 
-  .page .sticker {
+  .page .sticker,
+  .single .sticker {
     display: inline-block;
-    margin-bottom: 1.84rem;
+    margin-bottom: 3.68rem;
   }
 
   a.sticker:hover,
