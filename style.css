@@ -290,8 +290,11 @@ img {
   grid-gap: 2rem;
 }
 
+  .stickers .sticker {
+    align-self: center;
+  }
+
   .sticker {
-    align-self: start;
     background-color: #eee;
     box-shadow: .5rem .5rem #666;
     line-height: 0;
@@ -451,6 +454,10 @@ a.section-header:focus {
   grid-column-gap: 2rem;
   grid-template-columns: repeat( 2, 1fr );
 }
+
+  #brand-details #brand-logo {
+    text-align: right;
+  }
 
 #product-rating-box h3 {
 	margin-bottom: 0;

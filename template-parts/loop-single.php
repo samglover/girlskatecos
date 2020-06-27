@@ -6,10 +6,10 @@
 
     <?php if ( ! get_field( 'show_brand_details' ) && has_post_thumbnail() ) { ?>
 
-      <div class="sticker">
-
-        <?php the_post_thumbnail( 'medium' ); ?>
-
+      <div id="brand-logo">
+        <div class="sticker">
+          <?php the_post_thumbnail( 'medium' ); ?>
+        </div>
       </div>
 
     <?php } ?>

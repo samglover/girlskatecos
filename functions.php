@@ -367,8 +367,10 @@ function gsc_brand_details() {
 
         <?php if ( has_post_thumbnail() ) { ?>
 
-          <div class="sticker">
-            <?php the_post_thumbnail( 'medium' ); ?>
+          <div id="brand-logo">
+            <div class="sticker">
+              <?php the_post_thumbnail( 'medium' ); ?>
+            </div>
           </div>
 
         <?php } ?>
