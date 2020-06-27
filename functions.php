@@ -306,9 +306,19 @@ function gsc_brand_details() {
 
       ?>
 
-      <div id="brand-details" class="card<?php if ( has_post_thumbnail() ) { echo ' has-brand-logo'; } ?>">
+      <div id="brand-detail-box" class="card<?php if ( has_post_thumbnail() ) { echo ' has-brand-logo'; } ?>">
 
-        <div class="details">
+        <?php if ( has_post_thumbnail() ) { ?>
+
+          <div id="brand-logo">
+            <div class="sticker">
+              <?php the_post_thumbnail( 'medium' ); ?>
+            </div>
+          </div>
+
+        <?php } ?>
+
+        <div id="brand-details">
 
           <h1 class="headline"><span itemprop="name"><?php echo $brand; ?></span></h1>
 
@@ -364,16 +374,6 @@ function gsc_brand_details() {
           <?php echo $schema_json; ?>
 
         </div>
-
-        <?php if ( has_post_thumbnail() ) { ?>
-
-          <div id="brand-logo">
-            <div class="sticker">
-              <?php the_post_thumbnail( 'medium' ); ?>
-            </div>
-          </div>
-
-        <?php } ?>
 
       </div>
 

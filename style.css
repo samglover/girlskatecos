@@ -445,19 +445,38 @@ a.section-header:focus {
   font-size: 1.4rem;
 }
 
-#brand-details {
+#brand-detail-box {
   margin-bottom: 6rem;
 }
 
-#brand-details.has-brand-logo {
+#brand-detail-box.has-brand-logo {
   display: grid;
+  grid-template-areas: 'details logo';
   grid-column-gap: 2rem;
   grid-template-columns: repeat( 2, 1fr );
 }
 
-  #brand-details #brand-logo {
+  #brand-detail-box #brand-logo {
+    grid-area: logo;
     text-align: right;
   }
+
+  #brand-detail-box #brand-details {
+    grid-area: details;
+  }
+
+@media ( max-width: 700px ) {
+
+  #brand-detail-box.has-brand-logo {
+    display: block;
+  }
+
+  #brand-detail-box #brand-logo {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+}
 
 #product-rating-box h3 {
 	margin-bottom: 0;
