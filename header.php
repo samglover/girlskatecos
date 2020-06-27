@@ -21,13 +21,20 @@
 
       <?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
 
+      <?php
+
+      $title_parts  = explode( ' ', get_bloginfo( 'name' ) );
+      $title        = implode( ' <br />', $title_parts );
+
+      ?>
+
   		<?php if ( is_front_page() ) { ?>
 
-  			<h1 id="title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+  			<h1 id="title"><a href="<?php echo home_url(); ?>"><?php echo $title; ?></a></h1>
 
   		<?php } else { ?>
 
-  			<p id="title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></p>
+  			<p id="title"><a href="<?php echo home_url(); ?>"><?php echo $title; ?></a></p>
 
   		<?php } ?>
 
