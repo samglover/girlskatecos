@@ -187,11 +187,22 @@ function get_brand_pages( $page_id = null ) {
   if ( ! $page_id ) { $page_id = get_the_ID(); }
 
   $args = array(
+    'meta_query'	=> array(
+      'relation'  => 'OR',
+      array(
+        'key'     => 'show_in_brand_list',
+        'compare' => 'NOT EXISTS',
+      ),
+      array(
+        'key'     => 'show_in_brand_list',
+        'compare' => '=',
+        'value'   => true,
+      ),
+    ),
     'order'           => 'ASC',
     'orderby'			    => 'title',
     'post_type'       => 'page',
     'posts_per_page'  => -1,
-    'post__not_in'    => array( 8 ),
   );
 
   $brand_pages_query = new WP_Query( $args );

@@ -1,6 +1,8 @@
 ( function( $ ) {
 
-  let stickers = document.getElementsByClassName( 'sticker' );
+  let stickers = document.querySelectorAll( '.sticker, .wp-block-image img' );
+
+  console.log( stickers.length );
 
   Array.prototype.forEach.call( stickers, function( sticker ) {
 

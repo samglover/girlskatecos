@@ -8,7 +8,7 @@
 
       <div id="brand-logo">
         <div class="sticker">
-          <?php the_post_thumbnail( 'medium' ); ?>
+          <?php the_post_thumbnail( 'large' ); ?>
         </div>
       </div>
 

@@ -294,7 +294,8 @@ img {
     align-self: center;
   }
 
-  .sticker {
+  .sticker,
+  .wp-block-image img {
     background-color: #eee;
     box-shadow: .5rem .5rem #666;
     line-height: 0;
