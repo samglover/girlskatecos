@@ -566,9 +566,11 @@ label {
 input,
 select,
 textarea {
-  border: .1rem solid #ddd;
+  background: none;
+  border: .1rem solid #aaa;
   border-radius: 0;
   box-sizing: border-box;
+  color: #efefef;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.5;
@@ -590,10 +592,10 @@ textarea {
 button,
 .button,
 .wp-block-button .wp-block-button__link {
-  background-color: #fff;
-  border: .1rem solid #ddd;
+  background: none;
+  border: .1rem solid #aaa;
   border-radius: 0;
-  color: #666;
+  color: #efefef;
   cursor: pointer;
   font-size: 1.4rem;
   font-weight: 400;
@@ -608,9 +610,8 @@ button,
 button:hover,
 .button:hover,
 .wp-block-button .wp-block-button__link:hover {
-  background-color: #d8f4f6;
+  background-color: #aaa;
   box-shadow: .5rem .5rem #ddd;
-  color: #c00;
   text-decoration: none;
 }
 
@@ -618,7 +619,6 @@ button:active,
 .button:active,
 .wp-block-button .wp-block-button__link:active {
   box-shadow: unset;
-  color: #c00;
   outline: none;
 }
 
@@ -630,12 +630,27 @@ button:active,
   margin-bottom: 2.76rem;
 }
 
+.forminator-response-message,
+.forminator-error-message {
+  color: #444;
+}
+
 .forminator-response-message {
   background-color: #d8f4f6;
 }
 
+  .forminator-response-message.forminator-show {
+    margin: 0 0 2.76rem 0;
+    padding: .75rem 1.25rem;
+  }
+
+  .forminator-response-message p {
+    margin-bottom: 0;
+  }
+
 .forminator-error-message {
   background-color: #f4f696;
+  padding: .75rem 1.25rem;
 }
 
 
