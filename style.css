@@ -2,7 +2,7 @@
 Theme Name:   girlskatecos
 Author:       Sam Glover
 Description:  A theme for girlskatecos.com
-Version:      0.1.0
+Version:      1.0.1
 Text Domain:  girlskatecos
 
 License:      Copyright Sam Glover
@@ -17,8 +17,8 @@ html {
 
 
 /**
-* Page Layout
-*/
+ * Page Layout
+ */
 
 body {
   background-color: #444;
@@ -76,8 +76,8 @@ body {
 
 
 /**
-* Core Typography
-*/
+ * Core Typography
+ */
 
 body {
   color: #efefef;
@@ -175,8 +175,8 @@ a:focus {
 
 
 /**
-* Grids
-*/
+ * Grids
+ */
 
 .grid-cols-2,
 .grid-cols-3,
@@ -243,8 +243,8 @@ a:focus {
 
 
 /**
-* Header
-*/
+ * Header
+ */
 
 #title {
   text-transform: uppercase;
@@ -272,8 +272,8 @@ a:focus {
 
 
 /**
-* Images
-*/
+ * Images
+ */
 
 img {
   height: auto;
@@ -283,8 +283,8 @@ img {
 
 
 /**
-* Stickers & Cards
-*/
+ * Stickers & Cards
+ */
 
 .stickers {
   grid-gap: 2rem;
@@ -425,8 +425,8 @@ a.card:active {
 
 
 /**
-* Posts & Pages
-*/
+ * Posts & Pages
+ */
 
 .section-header,
 a.section-header,
@@ -530,8 +530,8 @@ a.section-header:focus {
 
 
 /**
-* Blocks
-*/
+ * Blocks
+ */
 
 .wp-block-quote__citation,
 .wp-block-quote cite,
@@ -554,8 +554,8 @@ a.section-header:focus {
 
 
 /**
-* Forms
-*/
+ * Forms
+ */
 
 label {
   display: block;
@@ -586,8 +586,8 @@ textarea {
 
 
 /**
-* Buttons
-*/
+ * Buttons
+ */
 
 button,
 .button,
@@ -655,8 +655,8 @@ button:active,
 
 
 /**
-* Footer
-*/
+ * Footer
+ */
 
 #footer ul.menu {
   list-style: none;
