@@ -290,6 +290,24 @@ img {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: max-content max-content 1fr;
+  margin-bottom: 2.76rem;
+}
+
+  .sort-search > * {
+    margin: 0;
+  }
+
+@media ( max-width: 600px ) {
+
+  .sort-search {
+    grid-template-columns: repeat( 2, 1fr );
+  }
+
+  .sort-search #search-cos {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
 }
 
 .stickers {
