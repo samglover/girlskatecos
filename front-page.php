@@ -2,13 +2,13 @@
 
 <div id="content">
 
-  <?php if ( !is_paged() ) { ?>
+  <?php
 
-    <div class="stickers grid-cols-4">
-      <?php get_brand_pages( 11185 ); ?>
-    </div>
+    if ( ! is_paged() ) {
+      get_stickers();
+    }
 
-  <?php } ?>
+  ?>
 
   <a class="section-header" href="<?php echo get_term_link( 9 ); ?>">Reviews<?php if ( is_paged() ) { echo ', page ' . get_query_var( 'paged' ); } ?></a>
 

@@ -44,9 +44,9 @@ add_action( 'after_setup_theme', 'theme_setup' );
  * Register Stylesheets & Scripts
  */
 function register_stylesheets_scripts() {
-	wp_enqueue_style( 'normalize-css', TEMPLATE_DIR_URI . '/css/normalize.css' );
+	wp_enqueue_style( 'normalize', TEMPLATE_DIR_URI . '/css/normalize.css' );
 	wp_enqueue_style( 'stylesheet', TEMPLATE_DIR_URI . '/style.css', '', filemtime( get_stylesheet_directory() . '/style.css' ), 'all' );
-	wp_enqueue_script( 'footer-js', TEMPLATE_DIR_URI . '/js/footer.js',  '', filemtime( get_stylesheet_directory() . '/js/footer.js' ), true );
+	wp_enqueue_script( 'footer', TEMPLATE_DIR_URI . '/js/footer.js',  '', filemtime( get_stylesheet_directory() . '/js/footer.js' ), true );
 }
 
 add_action( 'wp_enqueue_scripts', 'register_stylesheets_scripts' );
@@ -146,11 +146,9 @@ function get_breadcrumbs() {
 
 
 /**
- * Brand Pages loop
+ * Stickers
  */
-function get_brand_pages( $page_id = null ) {
-
-  if ( ! $page_id ) { $page_id = get_the_ID(); }
+function get_stickers() {
 
   $args = array(
     'meta_query'	=> array(
@@ -165,8 +163,7 @@ function get_brand_pages( $page_id = null ) {
         'value'   => true,
       ),
     ),
-    'order'           => 'ASC',
-    'orderby'			    => 'title',
+    'orderby'			    => 'rand',
     'post_type'       => 'page',
     'posts_per_page'  => -1,
   );
@@ -175,17 +172,26 @@ function get_brand_pages( $page_id = null ) {
 
   ob_start();
 
-    if ( $brand_pages_query->have_posts() ) : while ( $brand_pages_query->have_posts() ) : $brand_pages_query->the_post();
-
+    if ( $brand_pages_query->have_posts() ) :
       ?>
-
-      <a <?php post_class( 'sticker' ); ?> href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
-        <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); } ?>
-      </a>
-
+        <div class="sort-search">
+          <button id="sort-stickers">Sort A to Z</button>
+          <button id="randomize-stickers">Randomize</button>
+          <input id="search-cos" name="search-cos" type="search" placeholder="Search brand names …" />
+        </div>
+        <div id="stickers" class="stickers grid-cols-4">
+          <?php
+            while ( $brand_pages_query->have_posts() ) : $brand_pages_query->the_post();
+              ?>
+                <a <?php post_class( 'sticker' ); ?> href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
+                  <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'medium' ); } ?>
+                </a>
+              <?php
+            endwhile;
+          ?>
+        </div>
       <?php
-
-    endwhile; endif;
+    endif;
 
   echo ob_get_clean();
 

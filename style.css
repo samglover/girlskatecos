@@ -23,7 +23,7 @@ html {
 body {
   background-color: #444;
   box-sizing: border-box;
-  font-family: 'American Typewriter', 'Courier New', Courier, sans-serif;
+  font-family: 'American Typewriter', 'Courier Prime', 'Courier New', Courier, sans-serif;
   margin: 0 auto;
   max-width: 90rem;
   padding: 1rem;
@@ -286,12 +286,19 @@ img {
  * Stickers & Cards
  */
 
+.sort-search {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: max-content max-content 1fr;
+}
+
 .stickers {
   grid-gap: 2rem;
 }
 
   .stickers .sticker {
     align-self: center;
+    position: relative;
   }
 
   .sticker,
@@ -433,7 +440,7 @@ a.section-header,
 a.section-header:visited {
   display: block;
   font-weight: 600;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1em 0;
   text-transform: uppercase;
 }
 
@@ -572,10 +579,13 @@ textarea {
   box-sizing: border-box;
   color: #efefef;
   font-size: 1.6rem;
-  font-weight: 300;
   line-height: 1.5;
   margin: 0 0 2.76rem 0;
   padding: .5rem 1rem;
+}
+
+select option {
+  color: #444;
 }
 
 input:not( .button ),
@@ -595,6 +605,7 @@ button,
   background: none;
   border: .1rem solid #aaa;
   border-radius: 0;
+  box-sizing: border-box;
   color: #efefef;
   cursor: pointer;
   font-size: 1.4rem;
@@ -611,7 +622,7 @@ button:hover,
 .button:hover,
 .wp-block-button .wp-block-button__link:hover {
   background-color: #aaa;
-  box-shadow: .5rem .5rem #ddd;
+  box-shadow: .25rem .25rem #ddd;
   text-decoration: none;
 }
 
@@ -620,6 +631,11 @@ button:active,
 .wp-block-button .wp-block-button__link:active {
   box-shadow: unset;
   outline: none;
+}
+
+button:disabled {
+  opacity: .75;
+  pointer-events: none;
 }
 
 .forminator-row {
@@ -666,4 +682,13 @@ button:active,
 
 #footer .copyright {
   color: #aaa;
+}
+
+
+/**
+ * Useful Classes
+ */
+
+.hidden {
+  display: none;
 }
