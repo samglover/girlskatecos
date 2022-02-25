@@ -339,7 +339,7 @@ img {
     grid-template-columns: repeat( 2, 1fr );
   }
 
-  .sort-search #search-cos {
+  .search-cos-container {
     grid-column-start: 1;
     grid-column-end: 3;
   }
