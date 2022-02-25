@@ -170,7 +170,7 @@ a:focus {
 /* Hidden Text */
 .screen-reader-text {
   position: absolute;
-    left: -5000px;
+    left: -9999px;
 }
 
 
@@ -295,6 +295,42 @@ img {
 
   .sort-search > * {
     margin: 0;
+  }
+
+  .search-cos-container {
+    position: relative;
+  }
+
+  .search-cos-container > * {
+    margin: 0;
+  }
+
+  .search-cos-container label {
+    height: 0;
+    padding: 0;
+    text-indent: -9999px;
+  }
+
+  .search-cos-container .close {
+    background: unset;
+    border: unset;
+    color: #ddd;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1;
+    padding: 0;
+    position: absolute;
+      right: .25em;
+      top: 50%;
+    transform: translateY( -50% );
+    transition: text-shadow .2s;
+  }
+
+  .search-cos-container .close:hover,
+  .search-cos-container .close:focus {
+    background: unset;
+    box-shadow: unset;
+    color: White;
   }
 
 @media ( max-width: 600px ) {
@@ -599,7 +635,7 @@ textarea {
   font-size: 1.6rem;
   line-height: 1.5;
   margin: 0 0 2.76rem 0;
-  padding: .5rem 1rem;
+  padding: .6rem 1rem;
 }
 
 select option {

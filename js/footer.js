@@ -34,7 +34,7 @@ if ( sortButton && stickers ) {
 if ( randomButton && stickers ) {
   let stickersId    = document.getElementById( 'stickers' );
   let stickersArray = Array.from( stickersId.children );
-  
+
   randomButton.addEventListener( 'click', function() {
     for ( let i = stickersArray.length - 1; i > 0; i-- ) {
       let j = Math.floor( Math.random() * ( i + 1 ) );
@@ -53,8 +53,9 @@ if ( randomButton && stickers ) {
 
 // Handles the search field.
 let searchField = document.getElementById( 'search-cos' );
+let closeButton = document.getElementById( 'clear-search-cos' );
 
-if ( searchField ) {
+if ( searchField && closeButton ) {
   searchField.addEventListener( 'input', function( e ) {
     let entry = e.target.value.toLowerCase();
 
@@ -65,10 +66,22 @@ if ( searchField ) {
           sticker.classList.add( 'hidden' );
         }
       });
+      closeButton.classList.remove( 'hidden' );
     } else {
-      stickers.forEach( function( sticker ) {
-        sticker.classList.remove( 'hidden' );
-      });
+      showAllStickers();
+      closeButton.classList.add( 'hidden' );
     }
+  });
+
+  closeButton.addEventListener( 'click', function() {
+    searchField.value = '';
+    showAllStickers();
+    closeButton.classList.add( 'hidden' );
+  });
+}
+
+function showAllStickers() {
+  stickers.forEach( function( sticker ) {
+    sticker.classList.remove( 'hidden' );
   });
 }

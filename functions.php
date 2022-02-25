@@ -177,7 +177,11 @@ function get_stickers() {
         <div class="sort-search">
           <button id="sort-stickers">Sort A to Z</button>
           <button id="randomize-stickers">Randomize</button>
-          <input id="search-cos" name="search-cos" type="search" placeholder="Search brand names …" />
+          <div class="search-cos-container">
+            <label>Search brand names …</label>
+            <input id="search-cos" name="search-cos" type="search" placeholder="Search brand names …" />
+            <button id="clear-search-cos" class="close hidden">&times;</button>
+          </div>
         </div>
         <div id="stickers" class="stickers grid-cols-4">
           <?php
