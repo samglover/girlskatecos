@@ -58,12 +58,14 @@ let closeButton = document.getElementById( 'clear-search-cos' );
 if ( searchField && closeButton ) {
   searchField.addEventListener( 'input', function( e ) {
     let entry = e.target.value.toLowerCase();
-
+    
     if ( entry ) {
       stickers.forEach( function( sticker ) {
         let title = sticker.getAttribute( 'title' ).toLowerCase();
         if ( title.indexOf( entry ) == -1 ) {
           sticker.classList.add( 'hidden' );
+        } else {
+          sticker.classList.remove( 'hidden' );
         }
       });
       closeButton.classList.remove( 'hidden' );
