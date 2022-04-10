@@ -1,0 +1,45 @@
+.wp-block-quote__citation,
+.wp-block-quote cite,
+.wp-block-quote footer {
+  color: $text-light;
+}
+
+.wp-block-table {
+  margin-bottom: $spacing-30px;
+
+  table {
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: $spacing-30px;
+    }
+  }
+}
+
+.wp-block-button__link {
+  background: none;
+  border: 1px solid $border;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: $text-body;
+  cursor: pointer;
+  font-size: $small;
+  line-height: $line-height-normal;
+  padding: .5em 1.5em;
+  text-transform: uppercase;
+  transition: background-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+
+  &:hover,
+  &:focus {
+    background-color: $text-light;
+    box-shadow: $button-shadow;
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: unset;
+    outline: none;
+  }
+}

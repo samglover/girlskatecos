@@ -1,0 +1,60 @@
+#header {
+  margin-bottom: $spacing-40px;
+
+  .has-custom-logo {
+    align-items: center;
+    display: grid;
+    grid-column-gap: $spacing-20px;
+    grid-template-columns: calc(8.5 * $tenpx) 1fr;
+    margin: 1em 0;
+
+    #title {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .custom-logo-link {
+    img {
+      border: calc(.2 * $tenpx) solid $border;
+      border-radius: 9999px;
+      margin: 0;
+      transition: opacity .2s;
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        opacity: .5;
+      }
+    }
+
+  }
+}
+
+#title {
+  font-size: $large;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  a,
+  a:visited {
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    color: #aaa;
+    text-decoration: none;
+  }
+}
+
+#breadcrumbs {
+  font-size: $small;
+  text-transform: uppercase;
+
+  .last-breadcrumb {
+    font-weight: bold;
+  }
+}

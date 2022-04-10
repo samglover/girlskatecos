@@ -1,0 +1,22 @@
+#content {
+  margin-bottom: $spacing-60px;
+}
+
+.section-header,
+a.section-header,
+a.section-header:visited {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+}
+
+a.section-header:hover,
+a.section-header:focus {
+  text-decoration: none;
+}
+
+.date {
+  color: $text-light;
+  font-size: $small;
+}
