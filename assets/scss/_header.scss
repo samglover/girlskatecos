@@ -5,7 +5,7 @@
     align-items: center;
     display: grid;
     grid-column-gap: $spacing-20px;
-    grid-template-columns: calc(8.5 * $tenpx) 1fr;
+    grid-template-columns: calc(11 * $tenpx) 1fr;
     margin: 1em 0;
 
     #title {
@@ -19,6 +19,10 @@
     img {
       border: calc(.2 * $tenpx) solid $border;
       border-radius: 9999px;
+      box-sizing: border-box;
+      display: block;
+      height: 100%;
+      width: 100%;
       margin: 0;
       transition: opacity .2s;
     }
