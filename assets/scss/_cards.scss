@@ -28,12 +28,12 @@
     background: unset;
     border: unset;
     color: $text-light;
-    font-size: $normal;
+    font-size: $large;
     font-weight: normal;
     line-height: 1;
     padding: 0;
     position: absolute;
-      right: .25em;
+      right: .5em;
       top: 50%;
     transform: translateY( -50% );
     transition: text-shadow .2s;
