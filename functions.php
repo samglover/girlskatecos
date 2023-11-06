@@ -7,16 +7,16 @@ define('THEME_VERSION', wp_get_theme()->get('Version'));
 /**
  * Unregister Post Tags
  */
+add_action('init', 'unregister_tags');
 function unregister_tags() {
   register_taxonomy('post_tag', []);
 }
-
-add_action('init', 'unregister_tags');
 
 
 /**
  * Theme Setup
  */
+add_action('after_setup_theme', 'theme_setup');
 function theme_setup() {
   add_theme_support('custom-logo', [
     'height'      => 110,
@@ -36,29 +36,27 @@ function theme_setup() {
   add_editor_style('editor-styles.css');
 }
 
-add_action('after_setup_theme', 'theme_setup');
-
 
 /**
  * Register Stylesheets & Scripts
  */
+add_action('wp_enqueue_scripts', 'register_stylesheets_scripts');
 function register_stylesheets_scripts() {
 	wp_enqueue_style('normalize', TEMPLATE_DIR_URI . 'assets/css/normalize.css', [], THEME_VERSION);
 	wp_enqueue_style('stylesheet', TEMPLATE_DIR_URI . 'assets/css/style.css', [], THEME_VERSION, 'all');
 	wp_enqueue_script('footer', TEMPLATE_DIR_URI . 'assets/js/footer.js', [], THEME_VERSION, true);
 }
 
-add_action('wp_enqueue_scripts', 'register_stylesheets_scripts');
 
 
 /**
  * Register Footer Menu
  */
+add_action('init', 'register_menus');
 function register_menus() {
 	register_nav_menus(['footer-menu' => 'Footer Menu']);
 }
 
-add_action('init', 'register_menus');
 
 
 /**
@@ -219,6 +217,7 @@ function get_date_meta() {
 /**
  * Adds a shortcode for outputting the brand details.
  */
+add_shortcode('brand-details', 'gsc_brand_details');
 function gsc_brand_details() {
   global $post;
 
@@ -287,12 +286,11 @@ function gsc_brand_details() {
   }
 }
 
-add_shortcode('brand-details', 'gsc_brand_details');
-
 
 /**
  * Adds the [brand-details] shortcode if it it isn't already in the content.
  */
+add_filter('the_content', 'gsc_brand_details_default_shortcode');
 function gsc_brand_details_default_shortcode($content) {
   if (get_field('show_brand_details') && ! has_shortcode($content, 'brand-details')) {
     $content = do_shortcode('[brand-details]') . $content;
@@ -301,7 +299,6 @@ function gsc_brand_details_default_shortcode($content) {
   return $content;
 }
 
-add_filter('the_content', 'gsc_brand_details_default_shortcode');
 
 
 /**
@@ -357,6 +354,7 @@ function gsc_star_rating($rating = null) {
 /**
  * Adds product reviews.
  */
+add_filter('the_content', 'gsc_product_review');
 function gsc_product_review($content) {
   if (is_single() && get_field('gsc_show_product_rating') && have_rows('gsc_product_rating')) :
     $product_rating = array();
@@ -423,5 +421,3 @@ function gsc_product_review($content) {
 
   return $content;
 }
-
-add_filter('the_content', 'gsc_product_review');
