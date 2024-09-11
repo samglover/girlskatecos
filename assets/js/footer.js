@@ -92,5 +92,6 @@ if (searchField && closeButton) {
 function showAllStickers() {
   stickers.forEach(function(sticker) {
     sticker.classList.remove('hidden');
+    noStickersMessage.classList.add('hidden');
   });
 }
