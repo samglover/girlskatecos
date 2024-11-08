@@ -6,7 +6,7 @@ is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## 1.0.6 - 2024-11-08
 
 ### Changed
-- Changed "Shop" URL label to "Website/Shop".
+- Changed "Shop" URL label to "Website/shop".
 
 ## 1.0.5 - 2024-09-04
 
