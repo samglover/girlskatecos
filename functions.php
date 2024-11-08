@@ -260,7 +260,7 @@ function gsc_brand_details() {
             <ul>
               <?php if (get_field('shop_url') == true) { ?>
                 <?php $shop_url= get_field('shop_url'); ?>
-                <li><a href="<?php echo $shop_url; ?>">Shop</a></li>
+                <li><a href="<?php echo $shop_url; ?>">Website/Shop</a></li>
               <?php } ?>
 
               <?php if (get_field('instagram') == true) { ?>
