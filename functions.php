@@ -160,7 +160,7 @@ function get_stickers() {
               <?php
             endwhile;
           ?>
-          <p id="no-stickers" class="hidden"><?php _e('No cos. found.', 'girlskatecos'); ?>
+          <p id="no-stickers" class="hidden" title="><?php _e('No cos. found.', 'girlskatecos'); ?>"><?php _e('No cos. found.', 'girlskatecos'); ?>
         </div>
       <?php
     endif;
