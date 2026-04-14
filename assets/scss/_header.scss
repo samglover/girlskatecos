@@ -1,12 +1,14 @@
 #header {
   margin-bottom: $spacing-40px;
 
-  .has-custom-logo {
-    align-items: center;
-    display: grid;
-    grid-column-gap: $spacing-20px;
-    grid-template-columns: calc(11 * $tenpx) 1fr;
-    margin: 1em 0;
+  &.has-custom-logo {
+    #logo-title {
+      align-items: center;
+      display: grid;
+      grid-column-gap: $spacing-20px;
+      grid-template-columns: calc(11 * $tenpx) 1fr;
+      margin: 1em 0;
+    }
 
     #title {
       line-height: $line-height-small;
@@ -58,8 +60,4 @@
 #breadcrumbs {
   font-size: $small;
   text-transform: uppercase;
-
-  .last-breadcrumb {
-    font-weight: bold;
-  }
 }
