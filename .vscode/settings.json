@@ -7,4 +7,5 @@
 	// "phpcbf.onsave": true,
 	"phpcbf.executablePath": "./vendor/bin/phpcbf",
 	"phpcbf.standard": "WordPress",
+	"editor.tabSize": 2,
 }
