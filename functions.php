@@ -158,8 +158,8 @@ function get_stickers() {
 			<button id="sort-stickers">Sort A to Z</button>
 			<button id="randomize-stickers">Randomize</button>
 			<div class="search-cos-container">
-				<label>Search brand names …</label>
-				<input id="search-cos" name="search-cos" type="search" placeholder="Search brand names …" />
+				<label>Search brand names</label>
+				<input id="search-cos" name="search-cos" type="search" placeholder="Search brand names" />
 				<button id="clear-search-cos" class="close hidden">x</button>
 			</div>
 		</div>
@@ -181,7 +181,7 @@ function get_stickers() {
 		<?php
 	endif;
 
-	echo wp_kses_post( ob_get_clean() );
+	echo ob_get_clean();
 }
 
 
