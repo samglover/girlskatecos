@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+.site-footer {
+	font-size: $size-sm;
+	margin-top: calc(2 * $spacing-xxl);
+	opacity: .5;
+}

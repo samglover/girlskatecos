@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{% include breadcrumbs.html %}
+
+<article class="brand" itemscope itemtype="http://schema.org/Brand">
+	<section class="brand-details__container">
+		<h1 class="brand-name" itemprop="name">{{ page.title | default: page.title }}</h1>
+		<div class="brand-details">
+			{%- if page.owners -%}
+				{%- assign owners_json = page.owners | jsonify -%}
+				{%- if owners_json contains '[' -%}
+					{%- assign owners = page.owners -%}
+				{%- else -%}
+					{%- assign owners = page.owners | split: '||__single_owner__||' -%}
+				{%- endif -%}
+				<div class="brand-owners" data-owners="{{ owners.size }}">
+          {%- if owners.size == 1 -%}
+					  <h2>Owner</h2>
+						<p itemprop="owner">{{ owners[0] }}</p>
+					{%- else -%}
+            <h2>Owners</h2>
+						<ul>
+							{%- for owner in owners -%}
+								<li itemprop="owner">{{ owner }}</li>
+							{%- endfor -%}
+						</ul>
+					{%- endif -%}
+				</div>
+			{%- endif -%}
+			
+			{%- if page.website_url or page.instagram_url -%}
+				<div class="brand-links">
+					<h2>Links</h2>
+					<ul>
+						{%- if page.website_url -%}
+							<li>
+                {%- include svg/globe.svg -%}
+                <a href="{{ page.website_url }}" target="_blank">Website</a>
+              </li>
+						{%- endif -%}
+						{%- if page.instagram_url -%}
+							<li>
+                {%- include svg/instagram.svg -%}
+                <a href="{{ page.instagram_url }}" target="_blank">Instagram</a>
+              </li>
+						{%- endif -%}
+					</ul>
+				</div>
+			{%- endif -%}
+			{%- if page.product_types -%}
+				<div class="brand-product_types">
+					<h2>Products</h2>
+					<ul>
+						{%- for product in page.product_types -%}
+							<li>{{ product }}</li>
+						{%- endfor -%}
+					</ul>
+				</div>
+			{%- endif -%}
+		</div>
+
+		{%- if page.logo -%}
+			<div class="brand-logo sticker">
+				<img itemprop="logo" src="{{ '/assets/img/logos/' | append: page.logo | relative_url }}" alt="{{ page.title | default: page.title }}" />
+			</div>
+		{%- endif -%}
+	</section>
+	
+	{%- if content -%}
+		<section class="brand-content">
+			{{ content }}
+		</section>
+	{%- endif -%}
+</article>

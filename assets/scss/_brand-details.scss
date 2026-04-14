@@ -1,0 +1,104 @@
+@use 'variables' as *;
+
+.brand-details__container {
+	border: $border;
+	display: grid;
+	gap: $spacing-lg;
+	grid-template-areas:
+		'brand-name logo'
+		'details logo'
+	;
+	grid-template-columns: 1fr 1fr;
+	padding: $spacing-lg;
+	
+	@media ( max-width: $breakpoint-md ) {
+    grid-template-areas:
+      'brand-name brand-name'
+      'details logo'
+		;
+	}
+
+	@media ( max-width: $breakpoint-sm ) {
+		grid-template-areas:
+      'brand-name'
+      'logo'
+      'details'
+		;
+		grid-template-columns: 1fr;
+
+		.brand-logo {
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+
+	.brand-details {
+		grid-area: details;
+
+		> :first-child,
+		> :first-child > :first-child {
+			margin-top: 0;
+		}
+
+		> :last-child,
+		> :last-child > :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.brand-name {
+		font-size: $size-lg;
+		grid-area: brand-name;
+		margin-top: 0;
+	}
+
+	h2 {
+		font-size: $size-default;
+    font-weight: normal;
+
+    + * {
+      margin-top: 0;
+    }
+	}
+	
+	.brand-logo {
+		align-self: start;
+		grid-area: logo;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+  .brand-owners {
+    p,
+    li {
+      font-size: $size-md;
+      font-weight: 600;
+    }
+  }
+
+  .brand-links {
+    ul {
+      list-style: none;
+      padding-left: unset;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      gap: $spacing-sm;
+    }
+
+		.svg-icon {
+			display: block;
+			fill: $color-text-body;
+			height: 1lh;
+			width: 1lh;
+		}
+  }
+	
+	+ .brand-content {
+		padding: 0 calc($border-width + $spacing-lg);
+	}
+}

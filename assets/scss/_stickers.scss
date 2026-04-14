@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+#stickers {
+	display: grid;
+	gap: $spacing-md;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: $spacing-xl;
+	margin-bottom: $spacing-xxl;
+	
+	@media ( max-width: $breakpoint-md ) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media ( max-width: $breakpoint-sm ) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.sticker {
+	align-self: center;
+	display: block;
+	margin: $spacing-sm;
+	position: relative;
+	
+	img {
+		border: none;
+		display: block;
+		height: auto;
+		margin: 0;
+		max-width: 100%;
+		transition: box-shadow .2s;
+	}
+
+	&:where(a) {
+		img {
+			&:hover:not(:active),
+			&:focus:not(:active) {
+				box-shadow: $box-shadow;
+			}
+		}
+	}
+	
+}

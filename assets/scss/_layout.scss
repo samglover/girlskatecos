@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+body {
+	background-color: DarkSlateGray;
+	line-height: 1;
+	margin: 0 auto;
+	max-width: $breakpoint-lg;
+	padding: $spacing-default;
+
+	* {
+		box-sizing: border-box;
+	}
+}
+
+.brand-content {
+	margin: $size-xxl auto;
+}

@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.screen-reader-text {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+    left: -9999px;
+    top: auto;
+  width: 1px;
+}

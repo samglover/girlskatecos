@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+label {
+  display: block;
+  font-size: $size-sm;
+  margin-bottom: $spacing-xxs;
+}
+
+input {
+  background: none;
+  border: $border;
+  border-radius: 0;
+	color: $color-text-body;
+  line-height: $line-height-sm;
+  padding: $spacing-sm $spacing-default;
+
+	&:active,
+	&:focus {
+		border-color: $color-link-hover;
+		outline: none;
+	}
+}
+
+// Clears the X from search boxes in Chrome and IE.
+input[type=search]::-ms-clear,
+input[type=search]::-ms-reveal {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}

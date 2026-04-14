@@ -1,0 +1,10 @@
+@use 'variables' as *;
+
+.breadcrumbs {
+	font-size: $size-sm;
+	margin: $spacing-md 0;
+
+	.separator {
+		color: $color-text-light;
+	}
+}
