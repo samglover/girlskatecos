@@ -1,9 +1,15 @@
 # Changelog for girlskatecos.com
 
-All notable changes to this project will be documented in this file. The format
-is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## 1.0.7 = 2025-02-09
+
+## 1.1.0 - 2026-04-14
+
+### Changed
+- Implement WP Coding Standards
+
+
+## 1.0.7 - 2025-02-09
 
 ### Fixed
 - Gave the #no-stickers placeholer a title attribute to resolve a Javascript error.

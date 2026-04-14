@@ -1,7 +1,17 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Page template
+ *
+ * @file    page.php
+ * @package Girl_Skate_Cos
+ * @since   1.0.0
+ */
 
-  <div id="content">
-    <?php get_template_part( 'template-parts/loop', 'single' ); ?>
-  </div>
+get_header();
+?>
+
+<div id="content">
+	<?php get_template_part( 'template-parts/loop', 'single' ); ?>
+</div>
 
 <?php get_footer(); ?>
