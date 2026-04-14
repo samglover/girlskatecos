@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 html {
   font-family: sans-serif;
   line-height: 1;
@@ -80,18 +82,4 @@ a:visited {
 a:hover,
 a:focus {
   color: $link-hover;
-}
-
-
-// Useful Classes
-.screen-reader-text {
-  height: 0;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: -9999px;
-}
-
-.hidden {
-  display: none;
 }
