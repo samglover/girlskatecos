@@ -13,7 +13,16 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
 
 		<p class="copyright"><small>
-			The original content within this website is &copy; <?php echo wp_kses_post( date( 'Y' ) ); ?>. <a href="https://girlskatecos.com/sitemap_index.xml">XML Sitemap</a>
+			<?php
+			echo wp_kses_post(
+				sprintf(
+					// Translators: %s is the current year.
+					__( 'The original content within this website is &copy; %s.', 'girl-skate-cos' ),
+					gmdate( 'Y' )
+				)
+			);
+			?>
+			<a href="https://girlskatecos.com/sitemap_index.xml">XML Sitemap</a>
 		</small></p>
 	</div>
 
