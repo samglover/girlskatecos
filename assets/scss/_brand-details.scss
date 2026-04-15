@@ -50,3 +50,25 @@
     }
   }
 }
+
+.brand-closed #brand-detail-box {
+  position: relative;
+
+  &::before {
+    background-color: $color-text-body;
+    box-shadow: $box-shadow;
+    color: $color-page;
+    content: 'CLOSED';
+    display: block;
+    font-size: $font-size-lg;
+    padding: $spacing-sm $spacing-lg;
+    position: absolute;
+      top: calc(-1 * $spacing-sm);
+      left: calc(-1 * $spacing-md);
+    transform: rotate(-7.5deg);
+  }
+
+  .headline {
+    margin-top: calc($font-size-lg + (2 * $spacing-sm)) !important;
+  }
+}
