@@ -12,20 +12,8 @@
  */
 function stickers() {
 	$args = array(
-		'meta_query'     => array(
-			'relation' => 'OR',
-			array(
-				'key'     => 'show_in_brand_list',
-				'compare' => 'NOT EXISTS',
-			),
-			array(
-				'key'     => 'show_in_brand_list',
-				'compare' => '=',
-				'value'   => true,
-			),
-		),
 		'orderby'        => 'rand',
-		'post_type'      => 'page',
+		'post_type'      => 'brand',
 		'posts_per_page' => -1,
 	);
 
@@ -35,7 +23,13 @@ function stickers() {
 		?>
 		<div id="stickers" class="stickers grid-cols-4">
 			<?php while ( $brand_pages_query->have_posts() ) : ?>
-				<?php $brand_pages_query->the_post(); ?>
+				<?php
+				$brand_pages_query->the_post();
+
+				if ( get_field( 'brand_closed' ) === true ) {
+					continue;
+				}
+				?>
 				<a 
 					<?php post_class( 'sticker' ); ?>
 					href="<?php the_permalink(); ?>"

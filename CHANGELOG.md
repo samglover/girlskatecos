@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 1.1.1 - 2026-04-15
+
+### Changed
+- Skate brands now have their own `brand` post type
+- Implement `brand_closed` ACF field on brands
+
+### Removed
+- Things related to `show_brand_details` ACF field
+
 
 ## 1.1.0 - 2026-04-14
 
