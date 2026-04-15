@@ -11,6 +11,12 @@ define( 'TEMPLATE_DIR_PATH', trailingslashit( get_template_directory() ) );
 define( 'TEMPLATE_DIR_URI', trailingslashit( get_template_directory_uri() ) );
 define( 'THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 
+/* Frontend */
+if ( ! is_admin() ) {
+	require_once TEMPLATE_DIR_PATH . 'frontend/breadcrumbs.php';
+	require_once TEMPLATE_DIR_PATH . 'frontend/sort-search.php';
+	require_once TEMPLATE_DIR_PATH . 'frontend/stickers.php';
+}
 
 add_action( 'init', 'unregister_tags' );
 /**
@@ -55,7 +61,8 @@ add_action( 'wp_enqueue_scripts', 'register_stylesheets_scripts' );
 function register_stylesheets_scripts() {
 	wp_enqueue_style( 'normalize', TEMPLATE_DIR_URI . 'assets/css/normalize.css', array(), THEME_VERSION );
 	wp_enqueue_style( 'stylesheet', TEMPLATE_DIR_URI . 'assets/css/style.css', array(), THEME_VERSION, 'all' );
-	wp_enqueue_script( 'footer', TEMPLATE_DIR_URI . 'assets/js/footer.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'sort-search', TEMPLATE_DIR_URI . 'assets/js/sort-search.js', array(), THEME_VERSION, true );
+	wp_enqueue_script( 'rotate-stickers', TEMPLATE_DIR_URI . 'assets/js/rotate-stickers.js', array(), THEME_VERSION, true );
 }
 
 
@@ -65,123 +72,6 @@ add_action( 'init', 'register_menus' );
  */
 function register_menus() {
 	register_nav_menus( array( 'footer-menu' => 'Footer menu' ) );
-}
-
-
-
-/**
- * ≈crumbs
- */
-function get_breadcrumbs() {
-	if ( is_front_page() ) {
-		return;
-	}
-
-	if ( is_singular() ) {
-		$post_id       = get_the_ID();
-		$breadcrumbs[] = '<span class="breadcrumb last-breadcrumb">' . get_the_title( $post_id ) . '</span>';
-
-		if ( is_singular( 'page' ) ) {
-			$parent_id = wp_get_post_parent_id( $post_id );
-
-			while ( $parent_id ) {
-				$parent_url    = get_the_permalink( $parent_id );
-				$parent_title  = get_the_title( $parent_id );
-				$breadcrumbs[] = '<span class="breadcrumb"><a href="' . $parent_url . '">' . $parent_title . '</a></span>';
-				$parent_id     = wp_get_post_parent_id( $parent_id );
-			}
-		}
-
-		if ( is_singular( 'post' ) ) {
-			$categories      = get_the_terms( $post_id, 'category' );
-			$category_id     = $categories[0]->term_id;
-			$category_url    = get_term_link( $category_id );
-			$category_title  = $categories[0]->name;
-			$breadcrumbs[]   = '<span class="breadcrumb"><a href="' . $category_url . '">' . $category_title . '</a></span>';
-			$category_parent = $categories[0]->parent;
-
-			while ( $category_parent ) {
-				$category        = get_term( $category_parent );
-				$category_id     = $category->term_id;
-				$category_url    = get_term_link( $category_id );
-				$category_title  = $category->name;
-				$breadcrumbs[]   = '<span class="breadcrumb"><a href="' . $category_url . '">' . $category_title . '</a></span>';
-				$category_parent = $category->parent;
-			}
-		}
-	} elseif ( is_archive() ) {
-		$breadcrumbs[] = '<span class="breadcrumb last-breadcrumb">' . single_term_title( '', false ) . '</span>';
-	}
-
-	$breadcrumbs[] = '<span class="breadcrumb home-breadcrumb"><a href="' . home_url() . '">Home</a></span>';
-	$breadcrumbs   = array_reverse( $breadcrumbs );
-
-	ob_start();
-	?>
-		<div id="breadcrumbs" class="small">
-			<?php echo wp_kses_post( implode( ' / ', $breadcrumbs ) ); ?>
-		</div>
-	<?php
-
-	echo wp_kses_post( ob_get_clean() );
-}
-
-
-/**
- * Stickers
- */
-function get_stickers() {
-	$args = array(
-		'meta_query'     => array(
-			'relation' => 'OR',
-			array(
-				'key'     => 'show_in_brand_list',
-				'compare' => 'NOT EXISTS',
-			),
-			array(
-				'key'     => 'show_in_brand_list',
-				'compare' => '=',
-				'value'   => true,
-			),
-		),
-		'orderby'        => 'rand',
-		'post_type'      => 'page',
-		'posts_per_page' => -1,
-	);
-
-	$brand_pages_query = new WP_Query( $args );
-
-	ob_start();
-	if ( $brand_pages_query->have_posts() ) :
-		?>
-		<div class="sort-search">
-			<button id="sort-stickers">Sort A to Z</button>
-			<button id="randomize-stickers">Randomize</button>
-			<div class="search-cos-container">
-				<label>Search brand names</label>
-				<input id="search-cos" name="search-cos" type="search" placeholder="Search brand names" />
-				<button id="clear-search-cos" class="close hidden">x</button>
-			</div>
-		</div>
-		<div id="stickers" class="stickers grid-cols-4">
-			<?php while ( $brand_pages_query->have_posts() ) : ?>
-				<?php $brand_pages_query->the_post(); ?>
-				<a <?php post_class( 'sticker' ); ?> href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
-					<?php
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'medium' );
-					}
-					?>
-				</a>
-			<?php endwhile; ?>
-			<p id="no-stickers" class="hidden" title="<?php esc_attr_e( 'No cos. found.', 'girlskatecos' ); ?>">
-				<?php esc_html_e( 'No cos. found.', 'girlskatecos' ); ?>
-			</p>
-		</div>
-		<?php
-	endif;
-
-	echo ob_get_clean();
 }
 
 
@@ -292,7 +182,7 @@ function gsc_brand_details() {
 						<?php if ( get_field( 'shop_url' ) == true ) { ?>
 							<li>
 								<a href="<?php echo esc_url( get_field( 'shop_url' ) ); ?>">
-									<?php echo esc_html__( 'Website/shop', 'girl-skate-cos' ); ?>
+									<?php echo esc_html__( 'Website/shop', 'girlskatecos' ); ?>
 								</a>
 							</li>
 						<?php } ?>
@@ -301,7 +191,7 @@ function gsc_brand_details() {
 							<?php $ig = get_field( 'instagram' ); ?>
 							<li>
 								<a href="<?php echo esc_attr( get_field( 'instagram' ) ); ?>">
-									<?php echo esc_html__( 'Instagram', 'girl-skate-cos' ); ?>
+									<?php echo esc_html__( 'Instagram', 'girlskatecos' ); ?>
 								</a>
 							</li>
 						<?php } ?>
@@ -466,7 +356,7 @@ function gsc_product_review( $content ) {
 				<a href="<?php echo esc_url( get_the_permalink( $product_rating['brand'] ) ); ?>">
 					<?php echo esc_html( get_the_title( $product_rating['brand'] ) ); ?>
 				</a>
-				<?php echo wp_kses_post($product_rating['name']); ?>
+				<?php echo wp_kses_post( $product_rating['name'] ); ?>
 			</h3>
 			<?php echo gsc_star_rating( $product_rating['rating'] ); ?>
 			<h4>Manufacturer</h4>

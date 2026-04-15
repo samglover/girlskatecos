@@ -11,7 +11,10 @@ get_header();
 ?>
 
 <div id="content">
-	<?php get_stickers(); ?>
+	<?php
+	sort_search();
+	stickers();
+	?>
 
 	<a class="section-header" href="<?php echo esc_url( get_term_link( 1 ) ); ?>">Blog Posts</a>
 	<?php get_posts_by_category_slug( 'blog-posts' ); ?>

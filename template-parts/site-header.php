@@ -41,5 +41,5 @@ if ( has_custom_logo() ) {
 	<p class="section-header">
 		<?php echo bloginfo( 'description' ); ?>
 	</p>
-	<?php get_breadcrumbs(); ?>
+	<?php breadcrumbs(); ?>
 </div>
