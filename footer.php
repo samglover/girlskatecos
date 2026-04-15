@@ -17,7 +17,7 @@
 			echo wp_kses_post(
 				sprintf(
 					// Translators: %s is the current year.
-					__( 'The original content within this website is &copy; %s.', 'girl-skate-cos' ),
+					__( 'The original content within this website is &copy; %s.', 'girlskatecos' ),
 					gmdate( 'Y' )
 				)
 			);
