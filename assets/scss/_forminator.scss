@@ -1,30 +1,9 @@
+@use 'variables' as *;
+
 .forminator-row {
-  margin-bottom: 0 !important;
-}
+	margin-bottom: $spacing-default;
 
-.forminator-row .forminator-has_error {
-  margin-bottom: 2.76rem;
-}
-
-.forminator-response-message,
-.forminator-error-message {
-  color: #444;
-}
-
-.forminator-response-message {
-  background-color: #d8f4f6;
-}
-
-  .forminator-response-message.forminator-show {
-    margin: 0 0 2.76rem 0;
-    padding: .75rem 1.25rem;
-  }
-
-  .forminator-response-message p {
-    margin-bottom: 0;
-  }
-
-.forminator-error-message {
-  background-color: #f4f696;
-  padding: .75rem 1.25rem;
+	input {
+		margin-bottom: 0;
+	}
 }

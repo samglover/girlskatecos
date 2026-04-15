@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+.sort-search {
+	display: flex;
+	gap: $spacing-sm;
+	margin-top: $spacing-default;
+	margin-bottom: $spacing-default;
+
+}
+
+.search-cos__container {
+	flex-grow: 1;
+	position: relative;
+
+	.search-cos {
+		padding-right: calc(2 * $spacing-default + 1ch);
+		width: 100%;
+	}
+
+	.clear {
+    background: unset;
+    border: unset;
+    color: $color-text-light;
+    font-weight: normal;
+    line-height: 1;
+    padding: 0;
+    position: absolute;
+      right: $spacing-default;
+      top: 50%;
+    transform: translateY( -50% );
+    transition: text-shadow .2s;
+
+    &:hover,
+    &:focus {
+      background: unset;
+      box-shadow: unset;
+      color: White;
+    }
+  }
+}
+
+.cos-count__container {
+  color: $color-text-light;
+	margin-top: $spacing-default;
+	margin-bottom: $spacing-xl;
+}

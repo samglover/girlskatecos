@@ -1,16 +1,19 @@
-@import 'variables';
-@import 'core';
-@import 'header';
-@import 'content';
-@import 'footer';
-@import 'grids';
-@import 'images';
-@import 'cards';
-@import 'brand-details';
-@import 'ratings';
-@import 'blocks';
-@import 'forms';
-@import 'buttons';
+@use 'layout';
+@use 'typography';
+
+@use 'header';
+@use 'breadcrumbs';
+@use 'sort-search';
+@use 'brand-details';
+@use 'footer';
+
+@use 'grids';
+@use 'cards';
+@use 'stickers';
+@use 'blocks';
+@use 'forms';
+@use 'buttons';
+@use 'utility';
 
 // Plugin-Specific Customizations
-@import 'forminator';
+@use 'forminator';

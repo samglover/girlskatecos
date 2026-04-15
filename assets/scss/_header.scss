@@ -1,17 +1,19 @@
+@use 'variables' as *;
+
 #header {
-  margin-bottom: $spacing-40px;
+  margin-bottom: $spacing-xl;
 
   &.has-custom-logo {
     #logo-title {
       align-items: center;
       display: grid;
-      grid-column-gap: $spacing-20px;
-      grid-template-columns: calc(11 * $tenpx) 1fr;
-      margin: 1em 0;
+      grid-column-gap: $spacing-md;
+      grid-template-columns: 3lh 1fr;
+      margin: $spacing-default 0;
     }
 
     #title {
-      line-height: $line-height-small;
+      line-height: $line-height-sm;
       margin: 0;
       padding: 0;
     }
@@ -19,7 +21,7 @@
 
   .custom-logo-link {
     img {
-      border: calc(.2 * $tenpx) solid $border;
+      border: $border;
       border-radius: 9999px;
       box-sizing: border-box;
       display: block;
@@ -40,7 +42,7 @@
 }
 
 #title {
-  font-size: $large;
+  font-size: $font-size-lg;
   font-weight: bold;
   text-transform: uppercase;
 
@@ -55,9 +57,4 @@
     color: #aaa;
     text-decoration: none;
   }
-}
-
-#breadcrumbs {
-  font-size: $small;
-  text-transform: uppercase;
 }

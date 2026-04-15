@@ -1,40 +1,50 @@
 $tenpx: 0.625rem;
 
-$box-shadow: .5rem .5rem #666;
-$button-shadow: .25rem .25rem #666;
-
 // Colors
-$background: #444;
-$text-body: #efefef;
-$text-light: #aaa;
-$border: #aaa;
-$link: #ddd;
-$link-hover: #bbb;
-$shadow: #A4BCC2;
-
-// Fonts
-$font: 'American Typewriter', 'Courier Prime', 'Courier New', Courier, sans-serif;
+$color-page: DarkSlateGray;
+$color-text-body: #efefef; // rgb(239, 239, 239)
+$color-text-light: rgb(from $color-text-body calc(r - 32) calc(g - 32) calc(b - 32));
+$color-link: $color-text-light;
+$color-link-hover: #efefef;
 
 // Font Sizes
-$x-small: .8rem;    // 12.80px
-$small: 1rem;       // 16.00px
-$normal: 1.25rem;   // 20.00px
-$medium: 1.563rem;  // 25.00px
-$large: 1.953rem;   // 31.25px
-$x-large: 2.441rem; // 39.06px
-$xxl: 3.052rem;     // 48.83px
-$huge: 3.815rem;    // 61.04px
+$font-size-xs: .8rem;    // 12.80px
+$font-size-sm: 1rem;       // 16.00px
+$font-size-default: 1.25rem;   // 20.00px
+$font-size-md: 1.563rem;  // 25.00px
+$font-size-lg: 1.953rem;   // 31.25px
+$font-size-xl: 2.441rem; // 39.06px
+$font-size-xxl: 3.052rem;     // 48.83px
+$font-size-huge: 3.815rem;    // 61.04px
 
-// Line Height
-$line-height-small: 1.15;
-$line-height-normal: 1.5;
+// Line height
+$line-height-sm: 1.15;
+$line-height-default: 1.5;
 
 // Spacing
-$spacing-10px: $tenpx;
-$spacing-15px: calc(1.5 * $tenpx);
-$spacing-20px: calc(2 * $tenpx);
-$spacing-30px: calc(3 * $tenpx);
-$spacing-40px: calc(4 * $tenpx);
-$spacing-60px: calc(6 * $tenpx);
+$spacing-tiny: calc( .25 * $tenpx);
+$spacing-xxs: calc( .5 * $tenpx);
+$spacing-xs: calc( .75 * $tenpx);
+$spacing-sm: $tenpx;
+$spacing-default: calc(1.5 * $tenpx);
+$spacing-md: calc(2 * $tenpx);
+$spacing-lg: calc(3 * $tenpx);
+$spacing-xl: calc(4 * $tenpx);
+$spacing-xxl: calc(6 * $tenpx);
 
-$indent: calc(2 * $tenpx);
+// Borders
+$border-width: 2px;
+$border-style: solid;
+$border-color: $color-text-light;
+$border: $border-width $border-style $border-color;
+
+// Shadows
+$color-shadow: rgb(from $color-text-body calc(r - 128) calc(g - 128) calc(b - 128));
+$box-shadow: $spacing-xs $spacing-xs $color-shadow;
+$button-shadow: $spacing-xxs $spacing-xxs $color-shadow;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

@@ -1,30 +1,26 @@
+@use 'variables' as *;
+
 label {
   display: block;
-  font-size: $small;
-  margin-bottom: calc(.5 * $tenpx);
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-xxs;
 }
 
 input,
 select,
 textarea {
   background: none;
-  border: 1px solid $border;
+  border: $border;
   border-radius: 0;
-  box-sizing: border-box;
-  color: $text-body;
-  line-height: $line-height-normal;
-  margin-bottom: 1em;
-  padding: .5em 1em;
-}
+	color: $color-text-body;
+  line-height: $line-height-sm;
+  padding: $spacing-sm $spacing-default;
 
-select option {
-  color: $background;
-}
-
-input:not( .button ),
-select,
-textarea {
-  width: 100%;
+	&:active,
+	&:focus {
+		border-color: $color-link-hover;
+		outline: none;
+	}
 }
 
 // Clears the X from search boxes in Chrome and IE.
