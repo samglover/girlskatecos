@@ -1,12 +1,15 @@
-@use 'core';
+@use 'layout';
+@use 'typography';
+
 @use 'header';
-@use 'content';
-@use 'footer';
-@use 'grids';
-@use 'images';
-@use 'cards';
+@use 'breadcrumbs';
+@use 'sort-search';
 @use 'brand-details';
-@use 'ratings';
+@use 'footer';
+
+@use 'grids';
+@use 'cards';
+@use 'stickers';
 @use 'blocks';
 @use 'forms';
 @use 'buttons';

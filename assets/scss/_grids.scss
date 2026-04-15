@@ -4,29 +4,18 @@
 .grid-cols-3,
 .grid-cols-4 {
   display: grid;
-  margin-bottom: $spacing-60px;
-
-  .card {
-    margin: 0;
-
-    &.has-post-thumbnail {
-      display: block;
-    }
-  }
+  gap: $spacing-default;
 }
 
 .grid-cols-2 {
-  grid-gap: $spacing-20px;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-cols-3 {
-  grid-gap: $spacing-15px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-cols-4 {
-  grid-gap: $spacing-10px;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -34,10 +23,6 @@
   @media ( max-width: 800px ) {
     .grid-cols-2 {
       display: block;
-
-      .card {
-        margin-bottom: $spacing-20px;
-      }
     }
 
     .grid-cols-3,
@@ -49,9 +34,5 @@
   @media ( max-width: 600px ) {
     .grid-cols-3 {
       display: block;
-
-      .card {
-        margin-bottom: $spacing-20px;
-      }
     }
   }

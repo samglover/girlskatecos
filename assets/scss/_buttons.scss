@@ -1,24 +1,26 @@
 @use 'variables' as *;
 
 button,
-.button {
-  background: none;
-  border: 1px solid $border;
-  border-radius: 0;
-  box-sizing: border-box;
-  color: $text-body;
-  cursor: pointer;
-  font-size: $small;
-  line-height: $line-height-normal;
-  padding: .5em 1.5em;
-  text-transform: uppercase;
-  transition: background-color .2s, box-shadow .2s;
+.button,
+.wp-block-button__link {
+  appearance: none;
   -webkit-appearance: none;
+  background: none;
+  border: $border;
+  border-radius: 0;
+  color: $color-link;
+  cursor: pointer;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  padding: $spacing-sm $spacing-default;
+  text-transform: uppercase;
+  transition: box-shadow .2s;
 
   &:hover,
   &:focus {
-    background-color: $text-light;
+    border-color: $color-link-hover;
     box-shadow: $button-shadow;
+    color: $color-link-hover;
     text-decoration: none;
   }
 

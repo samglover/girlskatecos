@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+html {
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+body {
+  color: $color-text-body;
+  font-family: 'American Typewriter', 'Courier Prime', 'Courier New', Courier, sans-serif;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+}
+
+a {
+  color: $color-link;
+
+  &:hover,
+  &:focus {
+    color: $color-link-hover;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: $line-height-sm;
+  margin-top: $spacing-lg;
+	margin-bottom: $spacing-xs;
+}
+
+h1 {
+  font-size: $font-size-huge;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-xl;
+}
+
+h4 {
+  font-size: $font-size-md;
+}
+
+h5 {
+  font-size: $font-size-default;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: $spacing-default;
+	margin-bottom: $spacing-default;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+blockquote,
+.wp-block-quote {
+  border-left: $border;
+  margin-left: 0;
+  padding-left: $spacing-md;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: $spacing-lg;
+	margin-bottom: $spacing-xs;
+}
+
+.date {
+  color: $color-text-light;
+  font-size: $font-size-sm;
+}
