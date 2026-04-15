@@ -28,7 +28,7 @@ if ( have_posts() ) :
 		<?php
 	endwhile;
 
-	echo wp_kses_post( the_posts_pagination() );
+	echo esc_html( the_posts_pagination() );
 else :
 	?>
 	<p class="post">No posts match your query.</p>

@@ -49,9 +49,6 @@ function stickers() {
 					?>
 				</a>
 			<?php endwhile; ?>
-			<p id="no-stickers" class="hidden" title="<?php esc_attr_e( 'No cos. found.', 'girlskatecos' ); ?>">
-				<?php esc_html_e( 'No cos. found.', 'girlskatecos' ); ?>
-			</p>
 		</div>
 		<?php
 	endif;
