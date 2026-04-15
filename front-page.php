@@ -16,9 +16,7 @@ get_header();
 	stickers();
 	?>
 
-	<a class="section-header" href="<?php echo esc_url( get_term_link( 1 ) ); ?>">
-		<?php esc_html_e( 'Blog posts', 'girlskatecos' ); ?>
-	</a>
+	<h2><?php esc_html_e( 'Posts', 'girlskatecos' ); ?></h2>
 	<?php get_template_part( 'template-parts/loop', 'index' ); ?>
 </div>
 

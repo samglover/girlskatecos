@@ -1,4 +1,4 @@
-let stickers = document.querySelectorAll('.sticker, .page-content img');
+let stickers = document.querySelectorAll('.sticker, .is-style-sticker');
 
 // Randomly rotates each sticker.
 if (stickers) {
