@@ -43,6 +43,16 @@ function register_menus() {
 }
 
 
+register_block_style(
+	'core/image',
+	array(
+		'name'         => 'sticker',
+		'label'        => 'Sticker',
+		'style_handle' => 'sticker',
+	)
+);
+
+
 add_action( 'init', 'unregister_tags' );
 /**
  * Unregister post tags
