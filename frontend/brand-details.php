@@ -49,7 +49,7 @@ function brand_details() {
 						<div class="row">
 							<?php $globe_icon = wp_remote_get( TEMPLATE_DIR_URI . 'assets/svg/globe.svg' )['body']; ?>
 							<?php echo $globe_icon; ?>
-							<a href="<?php echo esc_url( get_field( 'shop_url' ) ); ?>">
+							<a href="<?php echo esc_url( get_field( 'shop_url' ) ); ?>" target="_blank">
 								<?php echo esc_html__( 'Website', 'girlskatecos' ); ?>
 							</a>
 						</div>
@@ -59,7 +59,7 @@ function brand_details() {
 					<div class="row">
 						<?php $ig_icon = wp_remote_get( TEMPLATE_DIR_URI . 'assets/svg/instagram.svg' )['body']; ?>
 						<?php echo $ig_icon; ?>
-						<a href="<?php echo esc_attr( get_field( 'instagram' ) ); ?>">
+						<a href="<?php echo esc_attr( get_field( 'instagram' ) ); ?>" target="_blank">
 							<?php echo esc_html__( 'Instagram', 'girlskatecos' ); ?>
 						</a>
 					</div>

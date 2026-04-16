@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. The format 
 ### Changed
 - Skate brands now have their own `brand` post type
 - Implement `brand_closed` ACF field on brands
+- Add `target="_blank"` to brand links
 
 ### Removed
 - Things related to `show_brand_details` ACF field
