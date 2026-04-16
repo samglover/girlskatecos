@@ -20,7 +20,7 @@
 }
 
 
-  @media ( max-width: 800px ) {
+  @media ( max-width: $breakpoint-md ) {
     .grid-cols-2 {
       display: block;
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  @media ( max-width: 600px ) {
+  @media ( max-width: $breakpoint-sm ) {
     .grid-cols-3 {
       display: block;
     }
