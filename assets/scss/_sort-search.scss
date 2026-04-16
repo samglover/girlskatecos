@@ -1,15 +1,33 @@
 @use 'variables' as *;
 
 .sort-search {
-	display: flex;
+	display: grid;
 	gap: $spacing-sm;
+  grid-template-areas: 'sort randomize search';
+  grid-template-columns: auto auto 1fr;
 	margin-top: $spacing-default;
 	margin-bottom: $spacing-default;
 
+  @media ( max-width: $breakpoint-sm ) {
+    grid-template-areas: 
+      'sort randomize'
+      'search search'
+    ;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#sort-stickers {
+  grid-area: 'sort';
+}
+
+#randomize-stickers {
+  grid-area: 'randomize'
 }
 
 .search-cos__container {
 	flex-grow: 1;
+  grid-area: search;
 	position: relative;
 
 	.search-cos {
