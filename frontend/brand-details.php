@@ -103,7 +103,11 @@ add_filter( 'the_content', 'brand_details_default_shortcode' );
  * @param string $content The post content.
  */
 function brand_details_default_shortcode( $content ) {
-	if ( ! has_shortcode( $content, 'brand-details' ) ) {
+	if (
+		is_singular()
+		&& 'brand' === get_post_type()
+		&& ! has_shortcode( $content, 'brand-details' )
+	) {
 		$content = do_shortcode( '[brand-details]' ) . $content;
 	}
 
