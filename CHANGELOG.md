@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 1.1.3 - 2026-05-03
+
+### Fixed
+- Brand details no longer show up on non-brand pages
+
+
 ## 1.1.2 - 2026-04-16
 
 ## Changed
