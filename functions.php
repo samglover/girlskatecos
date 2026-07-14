@@ -77,6 +77,20 @@ function theme_setup() {
 			'header-text' => array( 'site-title', 'site-description' ),
 		)
 	);
+	
+	add_theme_support(
+		'html5',
+		array(
+			'caption',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'script',
+			'search-form',
+			'style',
+		)
+	);
+
 	add_theme_support( 'editor-styles' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'responsive-embeds' );
