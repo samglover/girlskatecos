@@ -23,4 +23,7 @@
 	<a class="skip-link screen-reader-text" href="#content">
 		<?php esc_html_e( 'Skip to content', 'cpt-theme' ); ?>
 	</a>
-	<?php get_template_part( 'template-parts/site-header' ); ?>
+
+	<div id="page-content" class="site wp-site-blocks">
+		<?php get_template_part( 'template-parts/site-header' ); ?>
+		<main id="main" class="site-main wp-block-group">
