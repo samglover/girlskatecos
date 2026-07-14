@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 1.2.0 - 2026-07-14
+
+### Added
+- Theme support for HTML5
+- Barebones `theme.json` in order to enable `settings.appearanceTools` and `settings.spacing`
+- `.aligncenter` styles
+
+### Changed
+- Updated `header.php` and `footer.php` to mirror [cpt-theme](https://github.com/samglover/cpt-theme)
+
+
 ## 1.1.3 - 2026-05-03
 
 ### Fixed
