@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "spacing": {
+      "customSpacingSize": true,
+      "spacingScale": {
+        "operator": "*",
+				"increment": 1.5,
+				"steps": 7,
+				"mediumStep": 2.5,
+				"unit": "rem"
+      }
+		}
+  }
+}
