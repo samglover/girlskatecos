@@ -1,11 +1,11 @@
 @use 'variables' as *;
 
 .sort-search {
-	display: flex;
+	display: grid;
 	gap: $spacing-sm;
+  grid-template-columns: max-content max-content auto;
 	margin-top: $spacing-default;
 	margin-bottom: $spacing-default;
-
 }
 
 .search-cos__container {
@@ -13,8 +13,11 @@
 	position: relative;
 
 	.search-cos {
-		padding-right: calc(2 * $spacing-default + 1ch);
-		width: 100%;
+    width: 100%;
+    
+    &:has(+ .clear:not(.hidden)) {
+      padding-right: calc(2 * $spacing-default + 1ch);
+    }
 	}
 
 	.clear {
