@@ -35,6 +35,7 @@ permalink: pretty
 show_excerpts: true
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 defaults:
   - scope:
       path: ""
@@ -68,3 +69,8 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude:
+  - vendor/
+  - README.md
+  - package-lock.json
