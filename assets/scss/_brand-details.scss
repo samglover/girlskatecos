@@ -9,7 +9,9 @@
 		'details logo'
 	;
 	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
 	padding: $spacing-lg;
+  position: relative;
 	
 	@media ( max-width: $breakpoint-md ) {
     grid-template-areas:
@@ -31,6 +33,26 @@
 			max-width: 100%;
 		}
 	}
+
+  &.brand-closed {
+    &::before {
+      background-color: #efefef;
+      box-shadow: $box-shadow;
+      color: $color-page;
+      content: 'CLOSED';
+      display: block;
+      font-size: $size-lg;
+      padding: $spacing-sm $spacing-lg;
+      position: absolute;
+        top: calc(-1 * $spacing-sm);
+        left: calc(-1 * $spacing-md);
+      transform: rotate(-7.5deg);
+    }
+
+    .brand-name {
+      margin-top: calc($size-lg + (2 * $spacing-sm));
+    }
+  }
 
 	.brand-details {
 		grid-area: details;

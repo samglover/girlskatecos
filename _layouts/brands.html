@@ -5,7 +5,7 @@ layout: default
 {% include breadcrumbs.html %}
 
 <article class="brand" itemscope itemtype="http://schema.org/Brand">
-	<section class="brand-details__container">
+	<section class="brand-details__container{% if page.closed %} brand-closed{% endif %}">
 		<h1 class="brand-name" itemprop="name">{{ page.title | default: page.title }}</h1>
 		<div class="brand-details">
 			{%- if page.owners -%}
@@ -30,6 +30,7 @@ layout: default
 				</div>
 			{%- endif -%}
 			
+			{%- unless page.closed -%}
 			{%- if page.website_url or page.instagram_url -%}
 				<div class="brand-links">
 					<h2>Links</h2>
@@ -49,6 +50,7 @@ layout: default
 					</ul>
 				</div>
 			{%- endif -%}
+			{%- endunless -%}
 			{%- if page.product_types -%}
 				<div class="brand-product_types">
 					<h2>Products</h2>

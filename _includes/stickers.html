@@ -1,14 +1,16 @@
 <section id="stickers">
 	{% for brand in site.brands %}
-		<a
-			class="sticker"
-			href="{{ brand.url }}"
-			data-brand-name="{{ brand.name }}"
-		>
-			<img
-				src="{{ '/assets/img/logos/' | append: brand.logo | relative_url }}"
-				alt="{{ brand.name }}"
-			/>
-		</a>
+		{% unless brand.closed %}
+			<a
+				class="sticker"
+				href="{{ brand.url }}"
+				data-brand-name="{{ brand.title }}"
+			>
+				<img
+					src="{{ '/assets/img/logos/' | append: brand.logo | relative_url }}"
+					alt="{{ brand.title }}"
+				/>
+			</a>
+		{% endunless %}
 	{% endfor %}
 </section>

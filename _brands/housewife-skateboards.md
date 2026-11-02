@@ -9,6 +9,7 @@ product_types:
   - Skateboards & parts
   - Clothing & accessories
   - Stickers
+redirect_from: /brand/housewife-skateboards/
 ---
 
 ![Housewife Skateboards "stickers"](/assets/img/housewife-skateboards-stickers.png)

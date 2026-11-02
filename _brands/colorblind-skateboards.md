@@ -11,4 +11,5 @@ product_types:
   - Skateboards & parts
   - Clothing & accessories
   - Stickers
+redirect_from: /brand/colorblind-skateboards/
 ---

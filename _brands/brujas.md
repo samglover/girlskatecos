@@ -10,6 +10,7 @@ product_types:
   - Clothing & accessories
   - Stickers
   - Zine
+redirect_from: /brand/brujas/
 ---
 
 ![Brujas in NYC](/assets/img/brujas-nyt.jpg)

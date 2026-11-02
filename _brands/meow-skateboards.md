@@ -9,6 +9,7 @@ product_types:
   - Skateboards & parts
   - Clothing & accessories
   - Stickers
+redirect_from: /brand/meow/
 ---
 
 The Meow team includes household names like Leo Baker, Mariah Duran, and Vanessa Torres. Owner Lisa Whitaker is also a filmer and the founder of Girls Skate Network.

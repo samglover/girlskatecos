@@ -8,6 +8,7 @@ instagram_url: https://www.instagram.com/gnarhunters/
 product_types:
   - Clothing & accessories
   - Stickers
+redirect_from: /brand/gnarhunters/
 ---
 
 {% include vimeo.html id="447304512" %}

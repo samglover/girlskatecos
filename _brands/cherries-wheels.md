@@ -8,6 +8,7 @@ instagram_url: https://www.instagram.com/cherrieswheels/
 product_types:
   - Skateboards & parts
   - Clothing & accessories
+redirect_from: /brand/cherries-wheels/
 ---
 
 {% include youtube.html id="jopP4-ZMLGg" %}

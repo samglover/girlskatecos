@@ -8,6 +8,7 @@ website_url: https://doyennestudio.com/
 instagram_url: https://www.instagram.com/doyenneskateboards/
 product_types:
   - Clothing & accessories
+redirect_from: /brand/doyenne/
 ---
 
 > With over seven years working as a skateboarding brand, our practice includes art direction, production, fashion design, and curation.

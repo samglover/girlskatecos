@@ -11,8 +11,8 @@ product_types:
   - Skateboards & parts
   - Clothing & accessories
   - Zine
+redirect_from: /brand/quell/
+closed: true
 ---
 
-*Quell Skateboarding shut down production in October 2021, but its content is preserved as an archive on its website.*
-
-{% include vimeo.html id="258532630" %}
+*Quell Skateboarding shut down production in October 2021, but its content is preserved as an archive on [its website](https://www.quellskate.com/).*

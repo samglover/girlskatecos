@@ -18,6 +18,7 @@ product_types:
   - Clothing & accessories
   - Stickers
   - Lessons
+redirect_from: /brand/grlswirl/
 ---
 
 > GRLSWIRL started with the mission to empower women to get on skateboards in what can often seem like an intimidating, male-dominated sport. GRLSWIRL is a grassroots, all-female skate community focused on uniting women through skateboarding, empowering them to break gender boundaries and inspiring them to start a revolution by harnessing inclusivity and friendship.

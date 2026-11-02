@@ -9,4 +9,5 @@ product_types:
   - Skateboards & parts
   - Clothing & accessories
   - Stickers
+redirect_from: /brand/gripset-skate-co/
 ---

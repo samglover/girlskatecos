@@ -11,4 +11,5 @@ product_types:
   - Clothing & accessories
   - Lessons
   - Stickers
+redirect_from: /brand/sk8babes/
 ---
