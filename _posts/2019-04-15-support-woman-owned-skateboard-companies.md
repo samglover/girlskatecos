@@ -13,4 +13,4 @@ When I decided I wanted to buy my next deck from a woman-owned company, I couldn
 
 So I made this site.
 
-I’ll keep looking for more woman-owned skateboard companies, but if you know of one that isn’t listed here, please tell me: [email@girlskatecos.com](email@girlskatecos.com).
+I’ll keep looking for more woman-owned skateboard companies, but if you know of one that isn’t listed here, please [use this form to tell me](https://forms.gle/RjwPpudSo6Ufe9oi9).
