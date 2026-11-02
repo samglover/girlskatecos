@@ -13,4 +13,4 @@ closed: true
 redirect_from: /brand/salon/
 ---
 
-*Thanks [Quell](/brands/quell/) for letting me know about Salon!*
+*Thanks [Quell]({% link _brands/quell.md %}) for letting me know about Salon!*

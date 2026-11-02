@@ -12,4 +12,4 @@ redirect_from: /brand/strangr/
 
 > Strangr. is a genderless brand represented through clothing and visuals.
 
-*Thanks [Quell](/brands/quell/) for letting me know about STRANGR!*
+*Thanks [Quell]({% link _brands/quell.md %}) for letting me know about STRANGR!*

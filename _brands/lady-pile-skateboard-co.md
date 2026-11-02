@@ -11,4 +11,4 @@ product_types:
 redirect_from: /brand/lady-pile-skateboard-co/
 ---
 
-![](/assets/img/lady-pile-skateboarding-02.webp)
+![]({% link assets/img/lady-pile-skateboarding-02.webp %})

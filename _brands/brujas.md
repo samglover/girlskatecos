@@ -13,5 +13,5 @@ product_types:
 redirect_from: /brand/brujas/
 ---
 
-![Brujas in NYC](/assets/img/brujas-nyt.jpg)
+![Brujas in NYC]({% link assets/img/brujas-nyt.jpg %})
 [Photo from the *New York Times*](https://nyti.ms/2anjvMT)

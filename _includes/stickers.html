@@ -3,7 +3,7 @@
 		{% unless brand.closed %}
 			<a
 				class="sticker"
-				href="{{ brand.url }}"
+				href="{{ brand.url | relative_url }}"
 				data-brand-name="{{ brand.title }}"
 			>
 				<img

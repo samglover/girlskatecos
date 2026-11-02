@@ -12,11 +12,11 @@ product_types:
 redirect_from: /brand/housewife-skateboards/
 ---
 
-![Housewife Skateboards "stickers"](/assets/img/housewife-skateboards-stickers.png)
+![Housewife Skateboards "stickers"]({% link assets/img/housewife-skateboards-stickers.png %})
 
 Housewife skateboards reimagines 1950s bored-out-of-their-minds housewives as skaters.
 
-![A note that reads "Dear honey, I'm not home. Meatloaf is in the fridge. Went to shred with Betsy. Love, Donna"](/assets/img/housewife-skateboards-note.png)
+![A note that reads "Dear honey, I'm not home. Meatloaf is in the fridge. Went to shred with Betsy. Love, Donna"]({% link assets/img/housewife-skateboards-note.png %})
 
 Housewife also sponsors meetups, competitions, and other events around New York City, and collaborates with skate groups like [GRLSWIRL]({% link _brands/grlswirl.md %}) and [Quell]({% link _brands/quell.md %}).
 

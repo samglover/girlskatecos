@@ -9,7 +9,7 @@ This site exists to make it easier to spend your money at woman-owned skateboard
 
 When I decided I wanted to buy my next deck from a woman-owned company, I couldn’t find any up-to-date lists. I checked with [Skate Like a Girl](https://www.skatelikeagirl.com/), but they didn’t know of any lists either.
 
-![](/assets/img/ig-skatelikeagirl-sam.png)
+![]({% link assets/img/ig-skatelikeagirl-sam.png %})
 
 So I made this site.
 
