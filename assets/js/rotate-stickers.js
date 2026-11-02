@@ -1,6 +1,6 @@
 let stickers = document.querySelectorAll('.sticker, .page-content img');
 
-// Randomly rotates each sticker.
+// Randomly rotates each sticker. Also used for images.
 if (stickers) {
   stickers.forEach(function(sticker) {
     let rotation = Math.random() * (2 - -2) + -2;
