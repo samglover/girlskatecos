@@ -37,6 +37,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-target-blank
 defaults:
   - scope:
       path: ""
