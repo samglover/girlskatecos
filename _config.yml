@@ -71,6 +71,4 @@ collections:
 #   - vendor/ruby/
 
 exclude:
-  - vendor/
   - README.md
-  - package-lock.json
