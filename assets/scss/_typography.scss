@@ -1,83 +1,82 @@
 @use 'variables' as *;
 
-html {
-  font-family: sans-serif;
-  line-height: 1;
-}
-
 body {
-  color: $color-text-body;
-  font-family: 'American Typewriter', 'Courier Prime', 'Courier New', Courier, sans-serif;
-  font-size: $font-size-default;
-  line-height: $line-height-default;
+	color: $color-text-body;
+	font-size: $size-default;
+	font-family: $font;
 }
 
 a {
-  color: $color-link;
+	color: $color-link;
+	text-decoration: underline;
+	text-decoration-thickness: .05em;
 
-  &:hover,
-  &:focus {
-    color: $color-link-hover;
-  }
+	&:hover,
+	&:focus {
+		color: $color-link-hover;
+	}
+}
+
+
+blockquote {
+	border-left: $border;
+	font-size: $size-md;
+	line-height: $line-height-sm;
+	margin-top: 1lh;
+	margin-left: 0;
+	margin-bottom: $spacing-default;
+	padding-left: $size-md;
+
+	cite {
+		color: $color-text-light;
+		display: block;
+		font-size: $size-sm;
+		font-style: normal;
+		margin-top: $spacing-default;
+		margin-bottom: $spacing-default;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: $line-height-sm;
-  margin-top: $spacing-lg;
+	font-weight: 600;
+	line-height: $line-height-sm;
+	margin-top: $spacing-lg;
 	margin-bottom: $spacing-xs;
 }
 
 h1 {
-  font-size: $font-size-huge;
+	font-size: $size-xl;
 }
 
 h2 {
-  font-size: $font-size-xl;
+	font-size: $size-lg;
 }
 
 h3 {
-  font-size: $font-size-xl;
+	font-size: $size-md;
 }
 
 h4 {
-  font-size: $font-size-md;
+	font-size: $size-default;
 }
 
 h5 {
-  font-size: $font-size-default;
-  text-transform: uppercase;
+	font-size: $size-sm;
 }
 
 h6 {
-  font-size: $font-size-sm;
-  text-transform: uppercase;
+	font-size: $size-sm;
 }
 
 p {
-  margin-top: $spacing-default;
-	margin-bottom: $spacing-default;
-}
-
-small {
-  font-size: $font-size-sm;
-}
-
-blockquote,
-.wp-block-quote {
-  border-left: $border;
-  margin-left: 0;
-  padding-left: $spacing-md;
+	line-height: $line-height-default;
+	margin-top: 1lh;
+	margin-bottom: 1lh;
 }
 
 ol,
 ul {
-  padding-left: $spacing-md;
-  margin-top: $spacing-lg;
-	margin-bottom: $spacing-xs;
-}
-
-.date {
-  color: $color-text-light;
-  font-size: $font-size-sm;
+	line-height: $line-height-default;
+	margin-top: $spacing-default;
+	margin-bottom: $spacing-default;
 }

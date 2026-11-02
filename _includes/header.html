@@ -1,0 +1,15 @@
+<header class="site-header" role="banner">
+  <a class="site-title__container" href="{{ '/' | relative_url }}">
+    {%- if site.logo -%}
+      <img class="site-logo" src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" />
+    {%- endif -%}
+    {%- if page.url == '/' -%}
+      <h1 class="site-title">{{ site.title | escape }}</h1>
+    {%- else -%}
+      <p class="site-title">{{ site.title | escape }}</p>
+    {%- endif -%}
+  </a>
+  {%- if site.description -%}
+    <p class="site-description">{{ site.description | escape }}</p>
+  {%- endif -%}
+</header>

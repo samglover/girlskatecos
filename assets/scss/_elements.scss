@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+.page-content {
+	img {
+		background-color: $color-text-body;
+		border: $border;
+		display: block;
+		margin: $spacing-default auto;
+		max-width: 75%;
+		padding: $spacing-default;
+	}
+}

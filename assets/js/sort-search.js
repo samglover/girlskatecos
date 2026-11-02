@@ -13,6 +13,7 @@ if (stickersId) {
   clearButton.addEventListener('click', clearSearch);
 
   countCos();
+  randomize();
 }
 
 function sortAtoZ() {

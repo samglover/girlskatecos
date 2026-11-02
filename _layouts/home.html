@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <section id="posts">
+			<h2>{{ page.list_title | default: "Posts" }}</h2>
+			<ul class="post-list">
+				{%- for post in site.posts -%}
+				<li class="post__container">
+					<a class="post" href="{{ post.url | relative_url }}">
+						<h3 class="post-title">{{ post.title | escape }}</h3>
+						{%- if site.show_excerpts -%}
+							<p class="post-excerpt">{{ post.excerpt }}</p>
+						{%- endif -%}
+					</a>
+				</li>
+				{%- endfor -%}
+			</ul>
+		</section>
+  {%- endif -%}
+
+</div>

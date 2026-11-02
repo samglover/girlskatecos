@@ -1,7 +1,11 @@
 @use 'variables' as *;
 
+.clear {
+	clear: both;
+}
+
 .hidden {
-  display: none !important;
+	display: none !important;
 }
 
 .screen-reader-text {

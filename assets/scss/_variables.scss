@@ -6,16 +6,20 @@ $color-text-body: #efefef; // rgb(239, 239, 239)
 $color-text-light: rgb(from $color-text-body calc(r - 32) calc(g - 32) calc(b - 32));
 $color-link: $color-text-light;
 $color-link-hover: #efefef;
+$color-shadow: rgb(from $color-text-body calc(r - 128) calc(g - 128) calc(b - 128));
 
-// Font Sizes
-$font-size-xs: .8rem;    // 12.80px
-$font-size-sm: 1rem;       // 16.00px
-$font-size-default: 1.25rem;   // 20.00px
-$font-size-md: 1.563rem;  // 25.00px
-$font-size-lg: 1.953rem;   // 31.25px
-$font-size-xl: 2.441rem; // 39.06px
-$font-size-xxl: 3.052rem;     // 48.83px
-$font-size-huge: 3.815rem;    // 61.04px
+// Font
+$font: 'American Typewriter', 'Courier Prime', 'Courier New', Courier, sans-serif;
+
+// Sizes
+$size-xs: .8rem;    // 12.80px
+$size-sm: 1rem;       // 16.00px
+$size-default: 1.25rem;   // 20.00px
+$size-md: 1.563rem;  // 25.00px
+$size-lg: 1.953rem;   // 31.25px
+$size-xl: 2.441rem; // 39.06px
+$size-xxl: 3.052rem;     // 48.83px
+$size-huge: 3.815rem;    // 61.04px
 
 // Line height
 $line-height-sm: 1.15;
@@ -32,14 +36,12 @@ $spacing-lg: calc(3 * $tenpx);
 $spacing-xl: calc(4 * $tenpx);
 $spacing-xxl: calc(6 * $tenpx);
 
-// Borders
+// Borders and shadows
 $border-width: 2px;
 $border-style: solid;
 $border-color: $color-text-light;
 $border: $border-width $border-style $border-color;
 
-// Shadows
-$color-shadow: rgb(from $color-text-body calc(r - 128) calc(g - 128) calc(b - 128));
 $box-shadow: $spacing-xs $spacing-xs $color-shadow;
 $button-shadow: $spacing-xxs $spacing-xxs $color-shadow;
 

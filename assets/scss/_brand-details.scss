@@ -1,74 +1,126 @@
 @use 'variables' as *;
 
-#brand-detail-box {
-  margin-bottom: $spacing-xxl;
-  padding: $spacing-lg;
+.brand-details__container {
+	border: $border;
+	display: grid;
+	gap: $spacing-lg;
+	grid-template-areas:
+		'brand-name logo'
+		'details logo'
+	;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
+	padding: $spacing-lg;
+  position: relative;
+	
+	@media ( max-width: $breakpoint-md ) {
+    grid-template-areas:
+      'brand-name brand-name'
+      'details logo'
+		;
+	}
 
-  &.has-brand-logo {
-    display: grid;
-    grid-template-areas: 'details logo';
-    grid-column-gap: $spacing-lg;
-    grid-template-columns: repeat(2, 1fr);
-  }
+	@media ( max-width: $breakpoint-sm ) {
+		grid-template-areas:
+      'brand-name'
+      'logo'
+      'details'
+		;
+		grid-template-columns: 1fr;
 
-  @media ( max-width: $breakpoint-md ) {
-    &.has-brand-logo {
+		.brand-logo {
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+
+  &.brand-closed {
+    &::before {
+      background-color: #efefef;
+      box-shadow: $box-shadow;
+      color: $color-page;
+      content: 'CLOSED';
       display: block;
+      font-size: $size-lg;
+      padding: $spacing-sm $spacing-lg;
+      position: absolute;
+        top: calc(-1 * $spacing-sm);
+        left: calc(-1 * $spacing-md);
+      transform: rotate(-7.5deg);
     }
 
-    #brand-logo {
-      margin-bottom: $spacing-lg;
-      text-align: center;
+    .brand-name {
+      margin-top: calc($size-lg + (2 * $spacing-sm));
     }
   }
 
-  #brand-logo {
-    grid-area: logo;
-    text-align: right;
-  }
+	.brand-details {
+		grid-area: details;
 
-  #brand-details {
-    grid-area: details;
+		> :first-child,
+		> :first-child > :first-child {
+			margin-top: 0;
+		}
 
-    h2 {
-      color: $color-text-light;
-      font-size: $font-size-default;
+		> :last-child,
+		> :last-child > :last-child {
+			margin-bottom: 0;
+		}
+	}
 
-      + * {
-        margin-top: 0;
-      }
-    }
+	.brand-name {
+		font-size: $size-lg;
+		grid-area: brand-name;
+		margin-top: 0;
+	}
 
-    > :first-child,
-    > :first-child > :first-child {
+	h2 {
+		font-size: $size-default;
+    font-weight: normal;
+
+    + * {
       margin-top: 0;
     }
+	}
+	
+	.brand-logo {
+		align-self: start;
+		grid-area: logo;
 
-    > :last-child,
-    > :last-child > :last-child {
-      margin-bottom: 0;
+		img {
+			max-width: 100%;
+		}
+	}
+
+  .brand-owners {
+    p,
+    li {
+      font-size: $size-md;
+      font-weight: 600;
     }
   }
-}
 
-.brand-closed #brand-detail-box {
-  position: relative;
+  .brand-links {
+    ul {
+      list-style: none;
+      padding-left: unset;
+    }
 
-  &::before {
-    background-color: $color-text-body;
-    box-shadow: $box-shadow;
-    color: $color-page;
-    content: 'CLOSED';
-    display: block;
-    font-size: $font-size-lg;
-    padding: $spacing-sm $spacing-lg;
-    position: absolute;
-      top: calc(-1 * $spacing-sm);
-      left: calc(-1 * $spacing-md);
-    transform: rotate(-7.5deg);
+    li {
+      align-items: center;
+      display: flex;
+      gap: $spacing-sm;
+    }
+
+		.svg-icon {
+			display: block;
+			fill: $color-text-body;
+			height: 1lh;
+			width: 1lh;
+		}
   }
-
-  .headline {
-    margin-top: calc($font-size-lg + (2 * $spacing-sm)) !important;
-  }
+	
+	+ .brand-content {
+		padding: 0 calc($border-width + $spacing-lg);
+	}
 }

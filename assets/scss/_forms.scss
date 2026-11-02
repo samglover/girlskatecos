@@ -2,13 +2,11 @@
 
 label {
   display: block;
-  font-size: $font-size-sm;
+  font-size: $size-sm;
   margin-bottom: $spacing-xxs;
 }
 
-input,
-select,
-textarea {
+input {
   background: none;
   border: $border;
   border-radius: 0;

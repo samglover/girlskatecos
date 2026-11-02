@@ -1,21 +1,17 @@
 @use 'variables' as *;
 
 body {
-  background-color: $color-page;
-  margin: 0 auto;
-  max-width: $breakpoint-lg;
-  padding: $spacing-default;
-  
-  * {
-    box-sizing: border-box;
-  }
+	background-color: DarkSlateGray;
+	line-height: 1;
+	margin: 0 auto;
+	max-width: $breakpoint-lg;
+	padding: $spacing-default;
+
+	* {
+		box-sizing: border-box;
+	}
 }
 
-#content {
-  margin-bottom: $spacing-xxl;
-}
-
-.aligncenter {
-  margin-right: auto;
-  margin-left: auto;
+.brand-content {
+	margin: $size-xxl auto;
 }
