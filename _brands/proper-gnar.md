@@ -1,7 +1,6 @@
 ---
 title: Proper Gnar
 logo: proper-gnar.png
-schema: Brand
 owners: Elissa Steamer
 website_url: https://propergnar.com/
 instagram_url: Latosha Stone

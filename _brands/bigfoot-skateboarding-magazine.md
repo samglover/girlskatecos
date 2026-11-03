@@ -1,7 +1,6 @@
 ---
 title: Bigfoot Skateboarding Magazine
 logo: bigfoot-skateboarding-magazine.png
-schema: Brand
 owners:
   - Amy Caron
   - Meghan “Migzy” McGuire

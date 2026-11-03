@@ -1,7 +1,6 @@
 ---
 title: Salon
 logo: salon.png
-schema: Brand
 owners: Stefani Nurding
 website_url: http://salonskateboards.com/shop/
 instagram_url: https://www.instagram.com/salon_skateboards/

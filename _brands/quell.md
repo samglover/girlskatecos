@@ -1,7 +1,6 @@
 ---
 title: Quell
 logo: quell-skateboarding.png
-schema: Brand
 owners: 
   - Adrian Koenigsberg
   - Kristen Scalise

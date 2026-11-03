@@ -1,7 +1,6 @@
 ---
 title: Zeppelin Aero Works
 logo: zeppelin-aero-works.webp
-schema: Brand
 owners:
   - Laura Richards
   - Bud Stratford

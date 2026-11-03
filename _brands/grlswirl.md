@@ -1,7 +1,6 @@
 ---
 title: GRLSWIRL
 logo: grlswirl.png
-schema: Brand
 owners:
   - Kelsey Harkin
   - Lucy Osinski

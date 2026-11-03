@@ -1,7 +1,6 @@
 ---
 title: Circus Pony
 logo: circus-pony.png
-schema: Brand
 owners: Fritha Lewin
 website_url: https://circuspony.net/
 product_types:

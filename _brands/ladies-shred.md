@@ -1,7 +1,6 @@
 ---
 title: Ladies Shred
 logo: ladies-shred.jpg
-schema: Brand
 owners:
   - Lil
   - Ava

@@ -1,7 +1,6 @@
 ---
 title: Brujas
 logo: brujas.png
-schema: Brand
 owners: |
   Brujas seems to prefer to be cited as an anonymous “urban, free-form, creative and autonomous” collective of women.
 website_url: https://brujas.nyc/

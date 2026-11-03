@@ -1,7 +1,6 @@
 ---
 title: The Skate Witches Zine
 logo: skate-witches.jpg
-schema: Brand
 owners:
   - Kristin Ebeling
   - Shari White

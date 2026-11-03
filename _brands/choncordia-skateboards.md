@@ -1,7 +1,6 @@
 ---
 title: Choncordia Skateboards
 logo: choncordia-skateboards.jpg
-schema: Brand
 owners: Hali Estrada
 website_url: https://choncordia.com/
 instagram_url: https://www.instagram.com/choncordia_skateboards/

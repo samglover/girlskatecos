@@ -1,7 +1,6 @@
 ---
 title: Lady Pile Skateboard Co.
 logo: lady-pile-skateboard-co.webp
-schema: Brand
 owners: Lindz
 website_url: https://www.ladypileskateboardcompany.com/
 product_types:

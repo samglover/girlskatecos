@@ -1,7 +1,6 @@
 ---
 title: Sk8babes
 logo: sk8babes.png
-schema: Brand
 owners:
   - Liv Collins
   - Ang Caliwara

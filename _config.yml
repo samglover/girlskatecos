@@ -44,6 +44,8 @@ defaults:
       type: "brands"
     values:
       layout: "brands"
+      seo:
+        type: "Brand"
 
 # Collections
 collections:

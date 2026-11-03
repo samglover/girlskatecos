@@ -1,7 +1,6 @@
 ---
 title: She Skates
 logo: she-skates.jpg
-schema: Brand
 owners: Tatiana Rosario
 website_url: https://www.sheskates.net/shop
 product_types:
