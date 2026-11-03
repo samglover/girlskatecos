@@ -1,7 +1,6 @@
 ---
 title: Doyenne
 logo: doyenne.png
-schema: Brand
 owners: |
   Doyenne is a women-run multidisciplinary studio.
 website_url: https://doyennestudio.com/

@@ -1,7 +1,6 @@
 ---
 title: Original Skateboards
 logo: original-skateboards.png
-schema: Brand
 owners:
   - Gabrielle Nickas
   - Scott Imbrie

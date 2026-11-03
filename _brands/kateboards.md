@@ -1,7 +1,6 @@
 ---
 title: KateBoards
 logo: kateboards.png
-schema: Brand
 owners: Katie Adams
 website_url: https://www.kateboards.com/shop
 instagram_url: https://www.instagram.com/kateboards/

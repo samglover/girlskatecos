@@ -1,7 +1,6 @@
 ---
 title: WITHITGIRL
 logo: withitgirl.webp
-schema: Brand
 owners: Marialidia (Mols) Marcotulli
 website_url: https://www.withitgirls.com/skate
 instagram_url: https://www.instagram.com/withitgirl

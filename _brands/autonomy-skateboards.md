@@ -1,7 +1,6 @@
 ---
 title: Autonomy Skateboards
 logo: autonomy-skateboards.png
-schema: Brand
 owners:
   - Micaela Ramirez
   - Ken Perkins

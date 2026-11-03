@@ -1,7 +1,6 @@
 ---
 title: Zoni Girls
 logo: zoni-girls.png
-schema: Brand
 owners:
   - Paige
   - Sasha

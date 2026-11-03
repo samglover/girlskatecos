@@ -1,7 +1,6 @@
 ---
 title: Kalanchoe Skateboards
 logo: kalanchoe-skateboards.webp
-schema: Brand
 owners: Grace Djokoto
 website_url: https://www.kalanchoeskateboards.com/
 instagram_url: https://www.instagram.com/kalanchoe_skateboards/

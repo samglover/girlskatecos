@@ -1,7 +1,6 @@
 ---
 title: Meow Skateboards
 logo: meow-skateboards.png
-schema: Brand
 owners: Lisa Whitaker
 website_url: https://meowskateboards.com/
 instagram_url: https://www.instagram.com/meowskateboards/

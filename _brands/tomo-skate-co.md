@@ -1,7 +1,6 @@
 ---
 title: Tomo Skate Co.
 logo: tomo-skate-co.png
-schema: Brand
 owners: Tomoko Oikawa
 website_url: https://tomoskateco.com
 instagram_url: https://www.instagram.com/tomoskateco/

@@ -1,7 +1,6 @@
 ---
 title: Mamaskate
 logo: mamaskate.png
-schema: Brand
 owners: Marissa Martinez
 website_url: https://mamaskate.com/collections
 instagram_url: https://www.instagram.com/mamaskate

@@ -1,7 +1,6 @@
 ---
 title: Azza
 logo: azza.png
-schema: Brand
 owners: Tessa Slisz
 instagram_url: https://www.instagram.com/azzaskateboards/
 product_types:

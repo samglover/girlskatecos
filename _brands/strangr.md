@@ -1,7 +1,6 @@
 ---
 title: Strangr.
 logo: strangr.png
-schema: Brand
 owners: Jessyka Bailey
 website_url: https://www.wearestrangrs.com/store/
 instagram_url: https://www.instagram.com/strangr.us/

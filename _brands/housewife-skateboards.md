@@ -1,7 +1,6 @@
 ---
 title: Housewife Skateboards
 logo: housewife-skateboards.png
-schema: Brand
 owners: Charlotte Tegan
 website_url: https://www.housewifeskateboards.com/
 instagram_url: https://www.instagram.com/housewifeskate/

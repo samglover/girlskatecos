@@ -1,7 +1,6 @@
 ---
 title: Colorblind Skateboards
 logo: colorblind-skateboards.jpg
-schema: Brand
 owners:
   - Naïla Kitiara Houde
   - Martin Richard

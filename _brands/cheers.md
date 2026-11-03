@@ -1,7 +1,6 @@
 ---
 title: Cheers
 logo: cheers.png
-schema: Brand
 owners: Sabrina "Puse" Göggel
 website_url: https://www.cheers-skateboards.de/shop/
 instagram_url: https://www.instagram.com/cheersskateboards/

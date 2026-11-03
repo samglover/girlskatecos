@@ -1,7 +1,6 @@
 ---
 title: Cherries Wheels
 logo: cherries-wheels.png
-schema: Brand
 owners: Cat Tamez
 website_url: https://www.cherrieswheels.com/
 instagram_url: https://www.instagram.com/cherrieswheels/
