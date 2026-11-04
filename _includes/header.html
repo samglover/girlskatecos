@@ -1,7 +1,19 @@
 <header class="site-header" role="banner">
   <a class="site-title__container" href="{{ '/' | relative_url }}">
     {%- if site.logo -%}
-      <img class="site-logo" src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }} logo" />
+      <img
+        class="site-logo"
+        {%- if site.logo_src %}
+          src="{{ site.logo_src | relative_url }}"
+          srcset="{{ site.logo_srcset }}"
+          sizes="94px"
+          width="{{ site.logo_width }}"
+          height="{{ site.logo_height }}"
+          {%- else %}
+          src="{{ site.logo | relative_url }}"
+        {%- endif %}
+        alt="{{ site.title | escape }} logo"
+      />
     {%- endif -%}
     {%- if page.url == '/' -%}
       <h1 class="site-title">{{ site.title | escape }}</h1>
