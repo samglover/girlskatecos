@@ -7,7 +7,15 @@
 				data-brand-name="{{ brand.title }}"
 			>
 				<img
-					src="{{ '/assets/img/logos/' | append: brand.logo | relative_url }}"
+					{% if brand.logo_src %}
+						src="{{ brand.logo_src | relative_url }}"
+						srcset="{{ brand.logo_srcset }}"
+						sizes="210px"
+						width="{{ brand.logo_width }}"
+						height="{{ brand.logo_height }}"
+					{% else %}
+						src="{{ '/assets/img/logos/' | append: brand.logo | relative_url }}"
+					{% endif %}
 					alt="{{ brand.title }}"
 				/>
 			</a>
